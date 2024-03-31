@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jesús Navarro</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+  <div id="bg"></div>
+  <div style="display: none;" id="inicio"></div>
+  <header>
+    <nav>
+      <div class="bg-img">
+        <a id="logo" href="#"></a>
+      </div>
+      <ul id="tabs">
+        <li><a href="#" onclick="go_to(0)">Quién soy</a></li>
+        <!-- <li><a href="#experiencia" onclick="go_to(1)">Experiencia</a></li> -->
+        <li><a href="#proyectos" onclick="go_to(1)">Proyectos</a></li>
+        <li><a href="#contacto" onclick="go_to(2)">Contacto</a></li>
+      </ul>
+      <div class="bg-img">
+        <input type="checkbox" id="color-theme-btn" style="display: none;">
+        <label for="color-theme-btn" id="color-theme"></label>
+      </div>
+    </nav>
+  </header>
+  <section id="quien-soy" class="info-section">
+    <div class="inside-section">
+      <div id="pfp">
+        <div id="inside-pfp"></div>
+      </div>
+      <div id="info">
+        <h1 class="alterego" id="0" style="display: none;">cosmic3d</h1>
+        <h1 class="normalego" id="1">Jesús Navarro</h1>
+        <h2 class="alterego" id="2" style="display: none;">Ajedrecista y amante de los gatos</h2>
+        <h2 class="normalego" id="3">Software Developer Junior C/C++ | Game Developer</h2>
+        <p>Apasionado por la programación y el arte.</p>
+      </div>
+    </div>
+  </section>
+  <section id="proyectos" class="info-section">
+    <h1>Proyectos</h1>
+    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
+      <!-- <div class="parallax-bg" data-swiper-parallax="-23%"></div> -->
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="slide-content">
+            <div class="slide-content-info">
+              <div class="title" data-swiper-parallax="-3000">Fil de Fer</div>
+              <div class="subtitle" data-swiper-parallax="-2500">A 3D representation of a map using MinilibX C library
+              </div>
+              <div class="text" data-swiper-parallax="-1500">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+                Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+                ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+                tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+              </div>
+              <div class="knowledge-code" data-swiper-parallax="-2000">
+                <div class="knowledge">
+                  <h3>Conocimientos:</h3>
+                  <ul>
+                    <li>C</li>
+                    <li>MinilibX</li>
+                    <li>3D</li>
+                  </ul>
+                </div>
+                <div class="code">
+                  <h3>Código</h3>
+                  <a href="img/home.png"></a>
+                </div>
+              </div>
+            </div>
+            <div class="slide-content-img" style="background-image: url('img/codeigniter.png');" data-swiper-parallax="-3000">
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">Slide 2</div>
+          <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+          <div class="text" data-swiper-parallax="-100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="title" data-swiper-parallax="-300">Slide 3</div>
+          <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+          <div class="text" data-swiper-parallax="-100">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
+            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
+            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
+            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
+            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
+            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
+            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- <div class="swiper-pagination"></div> -->
+    </div>
+  </section>
+  <section id="contacto" class="info-section">
+    <h1>CONTACTO</h1>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      speed: 1000,
+      parallax: true,
+      // mousewheel: true,
+      // pagination: {
+      //   el: ".swiper-pagination",
+      //   clickable: true,
+      // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      // centeredSlides: true,
+      loop: true
+    });
+  </script>
+</body>
+
+</html>
