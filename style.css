@@ -251,9 +251,9 @@ nav {
 }
 
 #proyectos h1, #contacto h1 {
-	font-size: 80px;
+	font-size: 40px;
 	text-align: center;
-	margin: 1vw 0;
+	margin: 0.5vw 0;
 }
 
 .parallax-bg {
@@ -289,7 +289,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	flex-direction: row;
+	flex-direction: column;
 	width: 100%;
 	height: 100%;
 }
@@ -299,8 +299,8 @@ nav {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	/* width: 500px; */
-	/* height: 500px; */
+	width: 80%;
+	height: 50%;
 	border-radius: 40px;
 }
 
@@ -309,25 +309,26 @@ nav {
 }
 
 .slide-content-img {
-	width: 50%;
-	height: 100%;
+	width: 50vw;
+	height: 50vh;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	overflow: visible;
 }
 
 .swiper-slide .title {
-	font-size: 80px;
+	/* font-size: 40px; */
 	font-weight: 300;
 }
 
 .swiper-slide .subtitle {
-	font-size: 30px;
+	/* font-size: 25px; */
 }
 
 .swiper-slide .text{
-	font-size: 20px;
-	line-height: 1.3;
+	/* font-size: 15px; */
+	/* line-height: 1.3; */
 }
 
 /* RESPONSIVE */
