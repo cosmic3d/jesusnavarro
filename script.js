@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let root = document.documentElement;
 
     if (this.checked) {
-      // Set the variables for the light theme
+      // Variables para el tema claro
       root.style.setProperty('--color-text', '#000000');
       root.style.setProperty('--color-bg', '#ffffff');
       root.style.setProperty('--color-invert', 'invert(0)');
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // bg.style.backgroundImage = "url('img/cosmic_bg3.jpg')";
     } else {
       
-      // Set the variables for the dark theme
+      // Variables para el tema oscuro
       
       root.style.setProperty('--color-text', '#ffffff');
       root.style.setProperty('--color-bg', '#000000');
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   
 
-
+// Scroll especial
   window.addEventListener('wheel', function(event) {
     event.preventDefault();
     if (!canScroll || ctrlKeyDown) return;
@@ -114,12 +114,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 }, { passive: false });
 
+//Scroll especial para móviles
+
 window.addEventListener('touchmove', function(event) {
   if (!canScroll) return;
   const deltaY = event.touches[0].clientY - startY;
   startY = event.touches[0].clientY;
 event.preventDefault();
-  if (deltaY < -8) {
+  if (deltaY < -10) {
     canScroll = false;
     currentSection = currentSection == sections.length - 1 ? sections.length - 1 : currentSection + 1;
     scrollToSection(sections[currentSection]);
@@ -128,7 +130,7 @@ event.preventDefault();
     }
     , 325);
       
-  } else if (deltaY > 8){
+  } else if (deltaY > 10){
     canScroll = false;
     currentSection = currentSection == 0 ? 0 : currentSection - 1;
     scrollToSection(sections[currentSection]);
@@ -138,7 +140,6 @@ event.preventDefault();
     , 325);
   }
 }, { passive: false });
-//Function to change the currentSection variable
 
 });
 
@@ -239,10 +240,12 @@ pfp.addEventListener('mouseleave', function() {
 
 let ctrlKeyDown = false;
 
+// Evitamos el zoom en la medida de lo posible porque no me sale de los cojones que hagan zoom
+
 document.addEventListener("keydown", function (e) {
   if (e.ctrlKey) {
     ctrlKeyDown = true;
-    console.log(e.code);
+    console.log(e.code); 
     if (e.code === "BracketRight" ||
         e.code === "NumpadAdd" ||
         e.code === "Slash" ||

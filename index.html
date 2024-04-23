@@ -6,9 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jesús Navarro</title>
   <link rel="stylesheet" href="style.css">
+  <!-- MAIN SCRIPT -->
   <script src="script.js" defer></script>
+  <!-- FAVICON -->
   <link rel="shortcut icon" href="img/monogramaChus.png" type="image/x-icon">
+  <!-- FONT AWESOME FOR ICONS -->
+  <script src="https://kit.fontawesome.com/9a91b1ac50.js" crossorigin="anonymous"></script>
+  <!-- SWIPER FOR UI -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- RALEWAY FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+    <!-- METADATA FOR SEARCH ENGINES -->
+    <meta name="description" content="Jesús Navarro, Software Developer Junior C/C++ | Game Developer">
+    <meta name="keywords" content="Jesús Navarro, Software Developer, Game Developer, C programmer, C++ programmer, MinilibX, 3D">
+    <meta name="author" content="Jesús Navarro">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 days">
+    <meta name="language" content="English">
+    <meta name="distribution" content="global">
+    <meta name="rating" content="general">
+
+    <!-- OPEN GRAPH PROTOCOL -->
+    <meta property="og:title" content="Jesús Navarro">
+    <meta property="og:description" content="Jesús Navarro, Software Developer Junior C/C++ | Game Developer">
+    <meta property="og:image" content="img/jenavarr2.jpeg">
+    <meta property="og:url" content="https://jesusnavarro.dev">
+    <meta property="og:site_name" content="Jesús Navarro">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
 </head>
 
 <body>
@@ -53,32 +82,25 @@
         <div class="swiper-slide">
           <div class="slide-content">
             <div class="slide-content-info">
-              <div class="title" data-swiper-parallax="-3000">Fil de Fer</div>
-              <div class="subtitle" data-swiper-parallax="-2500">A 3D representation of a map using MinilibX C library
-              </div>
-              <div class="text" data-swiper-parallax="-1500">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-                laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-                Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-                Aliquam hendrerit lorem at elit facilisis rutrum.
-              </div>
-              <!-- <div class="knowledge-code" data-swiper-parallax="-2000">
-                <div class="knowledge">
-                  <h3>Conocimientos:</h3>
-                  <ul>
-                    <li>C</li>
-                    <li>MinilibX</li>
-                    <li>3D</li>
-                  </ul>
-                </div>
-                <div class="code">
-                  <h3>Código</h3>
-                  <a href="img/home.png"></a>
-                </div>
-              </div> -->
+              <h2 class="title" data-swiper-parallax="-3000">Fil de Fer</h2>
+              <p class="subtitle" data-swiper-parallax="-2500">A 3D representation of a map using MinilibX C library</p>
+              <ul class="proyect-icons fa-2xl">
+                <li>
+                  <i class="fa-brands fa-linkedin" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
+                </li>
+                <li>
+                  <i class="fa-brands fa-github" style="color: black;"></i>
+                </li>
+                <li>
+                  <i class="fa-brands fa-linkedin" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
+                </li>
+                <li>
+                  <i class="fa-brands fa-github" style="color: black;"></i>
+                </li>
+              </ul>
             </div>
-            <div class="slide-content-img" style="background-image: url('img/codeigniter.png');" data-swiper-parallax="-3000">
+            <div class="slide-content-img" style="background-image: url('img/codeigniter.png');"
+              data-swiper-parallax="-3000">
             </div>
           </div>
         </div>
@@ -111,31 +133,35 @@
       </div>
       <div class="swiper-button-next"></div>
       <div class="swiper-button-prev"></div>
-      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-pagination"></div>
     </div>
   </section>
   <section id="contacto" class="info-section">
     <h1>CONTACTO</h1>
+    <i class="fa-brands fa-linkedin"></i>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
       slidesPerView: 2,
-      speed: 1000,
+      speed: 500,
       parallax: false,
-      // mousewheel: true,
-      // pagination: {
-      //   el: ".swiper-pagination",
-      //   clickable: true,
-      // },
+  //     freeMode: {
+  //   enabled: true,
+  //   sticky: false,
+  // },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      // centeredSlides: true,
       loop: true
     });
   </script>
+  
 </body>
 
 </html>
