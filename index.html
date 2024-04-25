@@ -19,25 +19,26 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
-    <!-- METADATA FOR SEARCH ENGINES -->
-    <meta name="description" content="Jesús Navarro, Software Developer Junior C/C++ | Game Developer">
-    <meta name="keywords" content="Jesús Navarro, Software Developer, Game Developer, C programmer, C++ programmer, MinilibX, 3D">
-    <meta name="author" content="Jesús Navarro">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="1 days">
-    <meta name="language" content="English">
-    <meta name="distribution" content="global">
-    <meta name="rating" content="general">
+  <!-- METADATA FOR SEARCH ENGINES -->
+  <meta name="description" content="Jesús Navarro, Software Developer Junior C/C++ | Game Developer">
+  <meta name="keywords"
+    content="Jesús Navarro, Software Developer, Game Developer, C programmer, C++ programmer, MinilibX, 3D">
+  <meta name="author" content="Jesús Navarro">
+  <meta name="robots" content="index, follow">
+  <meta name="revisit-after" content="1 days">
+  <meta name="language" content="English">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
 
-    <!-- OPEN GRAPH PROTOCOL -->
-    <meta property="og:title" content="Jesús Navarro">
-    <meta property="og:description" content="Jesús Navarro, Software Developer Junior C/C++ | Game Developer">
-    <meta property="og:image" content="img/jenavarr2.jpeg">
-    <meta property="og:url" content="https://jesusnavarro.dev">
-    <meta property="og:site_name" content="Jesús Navarro">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="es_ES">
+  <!-- OPEN GRAPH PROTOCOL -->
+  <meta property="og:title" content="Jesús Navarro">
+  <meta property="og:description" content="Jesús Navarro, Software Developer Junior C/C++ | Game Developer">
+  <meta property="og:image" content="img/jenavarr2.jpeg">
+  <meta property="og:url" content="https://jesusnavarro.dev">
+  <meta property="og:site_name" content="Jesús Navarro">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
 </head>
 
 <body>
@@ -82,39 +83,47 @@
         <div class="swiper-slide">
           <div class="slide-content">
             <div class="slide-content-info">
-              <h2 class="title" data-swiper-parallax="-3000">Fil de Fer</h2>
-              <p class="subtitle" data-swiper-parallax="-2500">A 3D representation of a map using MinilibX C library</p>
+              <h2 class="title">Fil de Fer</h2>
+              <p class="subtitle">A 3D representation of a map using MinilibX C library</p>
               <ul class="proyect-icons fa-2xl">
                 <li>
                   <i class="fa-brands fa-linkedin" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
                 </li>
                 <li>
-                  <i class="fa-brands fa-github" style="color: black;"></i>
+                  <i class="fa-brands fa-github" style="color: var(--color-bg);"></i>
                 </li>
                 <li>
                   <i class="fa-brands fa-linkedin" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
                 </li>
                 <li>
-                  <i class="fa-brands fa-github" style="color: black;"></i>
+                  <i class="fa-brands fa-github" style="color: var(--color-bg);"></i>
                 </li>
               </ul>
             </div>
-            <div class="slide-content-img" style="background-image: url('img/codeigniter.png');"
-              data-swiper-parallax="-3000">
-            </div>
+            <img src="img/map3.jpg" alt="Codeigniter Practice" class="slide-content-img">
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="title" data-swiper-parallax="-600">Slide 2</div>
-          <div class="subtitle" data-swiper-parallax="-600">Subtitle</div>
-          <div class="text" data-swiper-parallax="-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-            dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
-            laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
-            Integer laoreet magna nec elit suscipit, ac laoreet nibh euismod.
-            Aliquam hendrerit lorem at elit facilisis rutrum. Ut at
-            ullamcorper velit. Nulla ligula nisi, imperdiet ut lacinia nec,
-            tincidunt ut libero. Aenean feugiat non eros quis feugiat.
+          <div class="slide-content">
+            <div class="slide-content-info">
+              <h2 class="title">Bill Management Website</h2>
+              <p class="subtitle">A bill management website for clients made using PHP and the Codeigniter framework, along with MySQL and Docker. </p>
+              <ul class="proyect-icons fa-2xl">
+                <li>
+                  <i class="fa-brands fa-linkedin" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
+                </li>
+                <li>
+                  <i class="fa-brands fa-github" style="color: var(--color-bg);"></i>
+                </li>
+                <li>
+                  <i class="fa-brands fa-linkedin" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
+                </li>
+                <li>
+                  <i class="fa-brands fa-github" style="color: var(--color-bg);"></i>
+                </li>
+              </ul>
+            </div>
+            <img src="img/codeigniter.png" alt="Codeigniter Practice" class="slide-content-img">
           </div>
         </div>
         <div class="swiper-slide">
@@ -143,13 +152,21 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 2,
+      slidesPerView: 1,
       speed: 500,
       parallax: false,
-  //     freeMode: {
-  //   enabled: true,
-  //   sticky: false,
-  // },
+      breakpoints: {
+        // when window width is >= 1024px
+        1024: {
+          slidesPerView: 2,
+          // parallax: false
+        }
+      },
+      //     freeMode: {
+      //     freeMode: {
+      //   enabled: true,
+      //   sticky: false,
+      // },
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -161,7 +178,7 @@
       loop: true
     });
   </script>
-  
+
 </body>
 
 </html>
