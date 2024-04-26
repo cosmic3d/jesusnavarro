@@ -311,9 +311,10 @@ nav {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 80%;
-	/* height: 50%; */
-	border-radius: 40px;
+
+		/* width: auto !important;
+max-height: 50% !important;
+	border-radius: 40px; */
 }
 
 .slide-content-info div, .slide-content-info p, .slide-content-info h2 {
@@ -345,6 +346,7 @@ nav {
 
 .swiper-slide .subtitle {
 	font-size: 18px;
+	/* width: 80vw; */
 }
 
 .swiper-slide .proyect-icons {
@@ -357,8 +359,22 @@ nav {
 	margin: 0;
 }
 
+.swiper-slide section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+	height: 100%;
+}
+
 .swiper-slide .proyect-icons li {
-	margin: 10px;
+	/* margin: 10px; */
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	transition: all 0.15s ease-in-out;
 	color: var(--color-text);
 }
@@ -380,7 +396,8 @@ nav {
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 1024px) {
+/* With operators */
+@media screen and ( 0 < width < 1024px) {
 	.bg-img
 	{
 		height: 100%;
@@ -445,8 +462,11 @@ nav {
 		height: 100%;
 	} */
 	.slide-content-img {
-		width: 105vw;
+		/* width: 105vw; */
+		max-width: 90vw;
+		width: auto;
 		overflow-x: visible !important;
+		max-height: 50%;
 		/* height: 40vw; */
 		
 	}
