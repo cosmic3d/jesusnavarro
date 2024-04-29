@@ -178,7 +178,7 @@ document.addEventListener('touchstart', function(e) {
 const pfp = document.getElementById('pfp');
 const alterego = document.querySelectorAll('.alterego');
 const normalego = document.querySelectorAll('.normalego');
-const textos = ["cosmic3d", "Jesús Navarro", "Ajedrecista y amante de los gatos", "Software Developer Junior C/C++ | Game Developer"]
+const textos = ["cosmic3d", "Jesús Navarro", "Ajedrecista \u2659 y amante de los gatos \uD83D\uDC08", "Software Developer Junior C/C++ | Game Developer"]
 let i = [0,0,0,0];
 let timeouts = [];
 const totalTime = 1500;
