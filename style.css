@@ -422,10 +422,10 @@ max-height: 50% !important;
 	color: var(--color-text) !important;
 }
 
-.github-button:has(li.github-icon:hover), .github-button:has(li.github-text:hover) {
+/* .github-button:has(li.github-icon:hover), .github-button:has(li.github-text:hover) {
 	background-color: var(--color-text);
 	transition: all 0.15s ease-in-out;
-}
+} */
 
 .proyect-icons.github-button:hover {
 	transform: scale(1.2);
