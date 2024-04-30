@@ -265,16 +265,19 @@ document.addEventListener("keyup", function (e) {
   }
 });
 
-/* SWIPER */
-/* var swiper = new Swiper(".mySwiper", {
-  speed: 600,
-  parallax: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-}); */
+
+/* La anchura de slide-content-info será siempre la de slide-content-img siempre que se haga resize */
+window.addEventListener('resize', function() {
+  setContentSizeToImgSize();
+});
+
+function setContentSizeToImgSize() {
+  let slides = document.getElementsByClassName("slide-content");
+  for (let i = 0; i < slides.length; i++) {
+    let info = slides[i].querySelector(".slide-content-info"); // Obtener el primer hijo con clase "slide-content-info"
+    let img = slides[i].querySelector(".slide-content-img"); // Obtener el último hijo con clase "slide-content-img"
+    info.style.width = img.offsetWidth + 'px'; // Usar offsetWidth para obtener el ancho real del elemento
+  }
+}
+
+setContentSizeToImgSize(); // Llamar a la función para que se ejecute al cargar la página

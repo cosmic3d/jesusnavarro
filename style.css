@@ -346,7 +346,8 @@ max-height: 50% !important;
 
 .slide-content-info h2
 {
-	text-shadow: 0 0 5px var(--color-text);
+	color: var(--color-text);
+	text-shadow: 0 0 5px var(--color-bg);
 }
 
 /* .slide-content-img {
@@ -381,7 +382,7 @@ max-height: 50% !important;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 60%;
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -407,16 +408,16 @@ max-height: 50% !important;
 	color: var(--color-text);
 }
 
-.swiper-slide .proyect-icons li:hover:not(.github-text):not(.github-button) {
+.swiper-slide .proyect-icons li:hover:not(.github-icon):not(.github-text) {
 	transform: scale(1.2);
 }
 
-.swiper-slide .proyect-icons li i
+.swiper-slide .proyect-icons li i.abilities
 {
 	transition: all 0.15s ease-in-out;
 }
 
-.swiper-slide .proyect-icons li:not(:hover):not(.github-text):not(.github-button) i
+.swiper-slide .proyect-icons li:not(:hover) i.abilities
 {
 	transition: all 0.15s ease-in-out;
 	color: var(--color-text) !important;
@@ -427,8 +428,37 @@ max-height: 50% !important;
 	transition: all 0.15s ease-in-out;
 } */
 
+.proyect-icons.github-button
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	width: 40%;
+	animation-name: grow;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
 .proyect-icons.github-button:hover {
-	transform: scale(1.2);
+	rotate: 0.01turn;
+}
+
+@keyframes grow {
+	0% {
+		transform: scale(1);
+		text-shadow: 0 0 5px var(--color-text);
+	}
+	50% {
+		transform: scale(1.05);
+		text-shadow: 0 0 15px var(--color-bg);
+	}
+	100% {
+		transform: scale(1);
+		text-shadow: 0 0 5px var(--color-text);
+	}
+	
 }
 
 .proyect-icons.github-button {
@@ -441,6 +471,11 @@ max-height: 50% !important;
 	/* color: var(--color-text); */
 	width:25%;
 	transition: all 0.15s ease-in-out;
+}
+
+.github-icon i, .github-text i{
+	color: var(--color-text);
+	/* background-color: var(--color-bg); */
 }
 
 .github-text a {
