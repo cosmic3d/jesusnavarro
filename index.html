@@ -57,15 +57,23 @@
         <li><a href="#proyectos" onclick="go_to(1)">Proyectos</a></li>
         <li><a href="#contacto" onclick="go_to(2)">Contacto</a></li>
       </ul>
-      <div class="bg-img">
-        <input type="checkbox" id="color-theme-btn" style="display: none;">
-        <label for="color-theme-btn" id="color-theme"></label>
+      <div class="language-theme-container">
+          <select name="idiomas" id="idiomas">
+            <option id="es" value="es">Spanish</option>
+            <option id="en" value="en" selected>English</option>
+            <option id="ca" value="ca">Catalan</option>
+            <option id="de" value="de">German</option>
+          </select>
+        <div class="language-theme">
+          <input type="checkbox" id="color-theme-btn" style="display: none;">
+          <label for="color-theme-btn" id="color-theme"></label>
+        </div>
       </div>
     </nav>
   </header>
   <section id="quien-soy" class="info-section">
     <div class="inside-section">
-      <div id="pfp"> 
+      <div id="pfp">
         <div id="inside-pfp"></div>
       </div>
       <div id="info">
@@ -78,7 +86,7 @@
     </div>
   </section>
   <section id="proyectos" class="info-section">
-    <h1>Proyectos</h1>
+    <h1 id="proyectosTitle">Proyectos</h1>
     <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
       <!-- <div class="parallax-bg" data-swiper-parallax="-23%"></div> -->
       <div class="swiper-wrapper">
@@ -90,16 +98,16 @@
               <section>
                 <ul class="proyect-icons fa-xl">
                   <li>
-                    <i class="devicon-c-plain-wordmark colored abilities"></i>
+                    <i class="devicon-c-plain-wordmark colored abilities" title="C Language"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-github abilities" style="color: var(--color-bg);"></i>
+                    <i class="fa-brands fa-github abilities" title="Github"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-linkedin abilities" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
+                    <i class="fa-brands fa-linkedin abilities" title="LinkedIn"></i>
                   </li>
                   <li>
-                    <i class="fa-brands fa-github abilities" style="color: var(--color-bg);"></i>
+                    <i class="fa-brands fa-github abilities" title="Github"></i>
                   </li>
                 </ul>
                 <ul class="proyect-icons github-button fa-2xl">
@@ -112,7 +120,7 @@
                 </ul>
               </section>
             </div>
-            <img src="img/map3.jpg" alt="FDF" class="slide-content-img">
+            <img src="img/map3.jpeg" alt="FDF" class="slide-content-img">
           </div>
         </div>
         <div class="swiper-slide">
