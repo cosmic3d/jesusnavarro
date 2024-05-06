@@ -278,7 +278,7 @@ nav {
 	font-size: 40px;
 	text-align: center;
 	margin: 0.5vw 0;
-	text-shadow: 0 0 5px var(--color-text);
+	/* text-shadow: 0 0 5px var(--color-text); */
 }
 
 .parallax-bg {
@@ -408,13 +408,15 @@ max-height: 50% !important;
 	color: var(--color-text);
 }
 
-.swiper-slide .proyect-icons li:hover:not(.github-icon):not(.github-text) {
+.swiper-slide .proyect-icons li:hover:not(.github-icon):not(.github-text) i {
 	transform: scale(1.2);
+	text-shadow: 0 0 5px var(--color-text);
 }
 
 .swiper-slide .proyect-icons li i.abilities
 {
 	transition: all 0.15s ease-in-out;
+	
 }
 
 .swiper-slide .proyect-icons li:not(:hover) i.abilities
@@ -439,12 +441,20 @@ max-height: 50% !important;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
+	box-sizing: border-box;
 }
 
 .proyect-icons.github-button:hover {
-	rotate: 0.01turn;
+	rotate: 0.005turn;
+	/* border: 3px solid var(--color-text); */
+	box-shadow: 1px 1px 10px var(--color-text);
 }
 
+.proyect-icons.github-button:hover i, .proyect-icons.github-button:hover a {
+	color: var(--color-text);
+	text-shadow: 0 0 5px var(--color-text);
+
+}
 @keyframes grow {
 	0% {
 		transform: scale(1);
@@ -480,10 +490,10 @@ max-height: 50% !important;
 
 .github-text a {
 	color: var(--color-text);
-	animation-name: glow;
+	/* animation-name: glow;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
-	animation-timing-function: ease-in-out;
+	animation-timing-function: ease-in-out; */
 }
 
 /* RESPONSIVE */
