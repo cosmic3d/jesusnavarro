@@ -204,6 +204,12 @@ function mostrarTexto(elemento, texto, index) {
 
 // Agregar un evento 'mouseenter' al elemento #pfp
 pfp.addEventListener('mouseenter', function() {
+  
+  mostrarAlterego();
+  // clearInterval(intervalo);
+});
+
+function mostrarAlterego() {
   i = [0,0,0,0];
   timeouts.forEach((timeoutId) => {
     clearTimeout(timeoutId);
@@ -218,10 +224,14 @@ pfp.addEventListener('mouseenter', function() {
     element.style.display = 'none';
 
   });
-  // clearInterval(intervalo);
-});
+}
 // Agregar un evento 'mouseover' al elemento #pfp
 pfp.addEventListener('mouseleave', function() {
+  
+  mostrarNormalego();
+});
+
+function mostrarNormalego() {
   i = [0,0,0,0];
   timeouts.forEach((timeoutId) => {
     clearTimeout(timeoutId);
@@ -236,8 +246,7 @@ pfp.addEventListener('mouseleave', function() {
     mostrarTexto(element, textos[parseInt(element.id)], parseInt(element.id));
     
   });
-});
-
+}
 let ctrlKeyDown = false;
 
 // Evitamos el zoom en la medida de lo posible porque no me sale de los cojones que hagan zoom
@@ -281,3 +290,35 @@ function setContentSizeToImgSize() {
 }
 
 setContentSizeToImgSize(); // Llamar a la función para que se ejecute al cargar la página
+
+
+// Utilizamos jsons para cambiar entre lenguajes con un evento ee change en el select
+const idiomas = {
+  "es": "languages/espanol.json",
+  "en": "languages/english.json"
+};
+
+document.getElementById('idiomas').addEventListener('change', function() {
+  const idioma = this.value;
+  changeLanguage(idioma);
+});
+
+function changeLanguage(idioma) {
+  fetch(idiomas[idioma])
+    .then(response => response.json())
+    .then(data => {
+      //INICIO
+      textos[2] = data.yo;
+      textos[3] = data.trabajo;
+      mostrarNormalego();
+      document.getElementById('proyectosTitle').innerText = data.proyectosTitle;
+      document.getElementById('contacto').innerText = data.contacto;
+      //LENGUAJES
+      document.getElementById('es').innerText = data.es;
+      document.getElementById('en').innerText = data.en;
+      document.getElementById('ca').innerText = data.ca;
+      document.getElementById('de').innerText = data.de;
+    });
+}
+
+changeLanguage('en'); // Llamamos a la función para que se ejecute al cargar la página
