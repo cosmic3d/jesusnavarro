@@ -146,7 +146,7 @@ event.preventDefault();
 let startY = 0;
 let currentSection = 0;
 let canScroll = true;
-let sections = ['', 'proyectos', 'contacto'];
+let sections = ['', 'sobre-mi', 'proyectos', 'contacto'];
 
 // Función para scrollear a la sección x
 function scrollToSection(section) {
@@ -312,7 +312,7 @@ function changeLanguage(idioma) {
       textos[3] = data.trabajo;
       mostrarNormalego();
       document.getElementById('proyectosTitle').innerText = data.proyectosTitle;
-      document.getElementById('contacto').innerText = data.contacto;
+      // document.getElementById('contacto').innerText = data.contacto;
       //LENGUAJES
       document.getElementById('es').innerText = data.es;
       document.getElementById('en').innerText = data.en;

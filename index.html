@@ -57,13 +57,13 @@
         <li><a href="#proyectos" onclick="go_to(1)">Proyectos</a></li>
         <li><a href="#contacto" onclick="go_to(2)">Contacto</a></li>
       </ul>
-      <div class="language-theme-container"> 
-          <select name="idiomas" id="idiomas">
-            <option id="es" value="es">Spanish</option>
-            <option id="en" value="en" selected>English</option>
-            <option id="ca" value="ca">Catalan</option>
-            <option id="de" value="de">German</option>
-          </select>
+      <div class="language-theme-container">
+        <select name="idiomas" id="idiomas">
+          <option id="es" value="es">Spanish</option>
+          <option id="en" value="en" selected>English</option>
+          <option id="ca" value="ca">Catalan</option>
+          <option id="de" value="de">German</option>
+        </select>
         <div class="language-theme">
           <input type="checkbox" id="color-theme-btn" style="display: none;">
           <label for="color-theme-btn" id="color-theme"></label>
@@ -86,10 +86,15 @@
     </div>
   </section>
   <section id="sobre-mi" class="info-section">
-    <h1>Sobre mí</h1>
-    <p>Estudiante de Ingeniería Informática en la Universidad de Alicante. Me apasiona la programación y el desarrollo
-      de videojuegos. Actualmente estoy aprendiendo C y C++ para poder desarrollar videojuegos y aplicaciones de
-      escritorio. También estoy interesado en el desarrollo web y en la ciberseguridad.</p>
+    <img src="img/floppahacker.jpg" alt="cosmic3d" title="This is the real me">
+    <div id="sobre-mi-info">
+      <h1>Sobre mí</h1>
+      <div id="sobre-mi-info-p">
+        <p>Estudiante de Ingeniería de Software en 42 Barcelona.</p>
+        <p>Desde mi primer contacto con la programación he amado este amplio mundo.</p>
+        <p>He realizado proyectos para desarrollo web, gráficos, sistemas e incluso videojuegos</p>
+      </div>
+    </div>
   </section>
   <section id="proyectos" class="info-section">
     <h1 id="proyectosTitle">Proyectos</h1>
@@ -118,7 +123,7 @@
                 </ul>
                 <ul class="proyect-icons github-button fa-2xl">
                   <li class="github-icon">
-                      <i class="devicon-github-original"></i>
+                    <i class="devicon-github-original"></i>
                   </li>
                   <li class="github-text">
                     <a class="subtitle">code</a>
@@ -147,7 +152,8 @@
                     <i class="fa-brands fa-linkedin abilities" title="LinkedIn" style="color: rgb(46, 46, 204);"></i>
                   </li>
                   <li>
-                    <img class="abilities" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
+                    <img class="abilities"
+                      src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" />
                   </li>
                 </ul>
                 <ul class="proyect-icons github-button fa-2xl">
@@ -164,9 +170,9 @@
           </div>
         </div>
         <div class="swiper-slide">
-          <div class="title" data-swiper-parallax="-300">Slide 3</div>
-          <div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-          <div class="text" data-swiper-parallax="-100">
+          <div class="title">Slide 3</div>
+          <div class="subtitle">Subtitle</div>
+          <div class="text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
             dictum mattis velit, sit amet faucibus felis iaculis nec. Nulla
             laoreet justo vitae porttitor porttitor. Suspendisse in sem justo.
@@ -183,8 +189,25 @@
     </div>
   </section>
   <section id="contacto" class="info-section">
-    <h1>CONTACTO</h1>
-    <i class="fa-brands fa-linkedin"></i>
+    <h1 id="contactoTitle">CONTACTO</h1>
+    <a
+      href="mailto:jnromero1313@gmail.com?subject=Lets%20work%20together!&body=Hi%20Chus!%20I%20would%20love%20to%20collaborate%20with%20you%20in%20this%20amazing%20project%20I%20am%20working%20on.">Mysterious
+      button</a>
+    <form action="">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
   </section>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
