@@ -91,87 +91,141 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
 // Scroll especial
-  window.addEventListener('wheel', function(event) {
-    event.preventDefault();
-    if (!canScroll || ctrlKeyDown) return;
-    if (event.deltaY > 0) {
-      canScroll = false;
-      currentSection = currentSection == sections.length - 1 ? sections.length - 1 : currentSection + 1;
-      scrollToSection(sections[currentSection]);
-      this.setTimeout(() => {
-        canScroll = true;
-      }
-      , 325);
+//   window.addEventListener('wheel', function(event) {
+//     event.preventDefault();
+//     if (!canScroll || ctrlKeyDown) return;
+//     if (event.deltaY > 0) {
+//       canScroll = false;
+//       currentSection = currentSection == sections.length - 1 ? sections.length - 1 : currentSection + 1;
+//       scrollToSection(sections[currentSection]);
+//       this.setTimeout(() => {
+//         canScroll = true;
+//       }
+//       , 325);
         
-    } else {
-      canScroll = false;
-      currentSection = currentSection == 0 ? 0 : currentSection - 1;
-      scrollToSection(sections[currentSection]);
-      this.setTimeout(() => {
-        canScroll = true;
-      }
-      , 325);
-    }
-}, { passive: false });
+//     } else {
+//       canScroll = false;
+//       currentSection = currentSection == 0 ? 0 : currentSection - 1;
+//       scrollToSection(sections[currentSection]);
+//       this.setTimeout(() => {
+//         canScroll = true;
+//       }
+//       , 325);
+//     }
+// }, { passive: false });
 
-//Scroll especial para móviles
+// //Scroll especial para móviles
 
-window.addEventListener('touchmove', function(event) {
-  if (!canScroll) return;
-  const deltaY = event.touches[0].clientY - startY;
-  startY = event.touches[0].clientY;
-event.preventDefault();
-  if (deltaY < -10) {
-    canScroll = false;
-    currentSection = currentSection == sections.length - 1 ? sections.length - 1 : currentSection + 1;
-    scrollToSection(sections[currentSection]);
-    this.setTimeout(() => {
-      canScroll = true;
-    }
-    , 325);
+// window.addEventListener('touchmove', function(event) {
+//   if (!canScroll) return;
+//   const deltaY = event.touches[0].clientY - startY;
+//   startY = event.touches[0].clientY;
+// event.preventDefault();
+//   if (deltaY < -10) {
+//     canScroll = false;
+//     currentSection = currentSection == sections.length - 1 ? sections.length - 1 : currentSection + 1;
+//     scrollToSection(sections[currentSection]);
+//     this.setTimeout(() => {
+//       canScroll = true;
+//     }
+//     , 325);
       
-  } else if (deltaY > 10){
-    canScroll = false;
-    currentSection = currentSection == 0 ? 0 : currentSection - 1;
-    scrollToSection(sections[currentSection]);
-    this.setTimeout(() => {
-      canScroll = true;
+//   } else if (deltaY > 10){
+//     canScroll = false;
+//     currentSection = currentSection == 0 ? 0 : currentSection - 1;
+//     scrollToSection(sections[currentSection]);
+//     this.setTimeout(() => {
+//       canScroll = true;
+//     }
+//     , 325);
+//   }
+// }, { passive: false });
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  speed: 500,
+  parallax: false,
+  grabCursor: true,
+  breakpoints: {
+    // when window width is >= 1024px
+    1024: {
+      slidesPerView: 2,
+      // parallax: false
     }
-    , 325);
-  }
-}, { passive: false });
+  },
+  //     freeMode: {
+  //     freeMode: {
+  //   enabled: true,
+  //   sticky: false,
+  // },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  loop: true
+});
+
+var mainSwiper = new Swiper(".mainSwiper", {
+  slidesPerView: 1,
+  speed: 450,
+  direction: 'vertical',
+  simulateTouch: true,
+  mousewheel: {
+    invert: true, // Opcional: true para invertir el desplazamiento del mouse
+    sensitivity: 1, // Opcional: ajusta la sensibilidad del desplazamiento
+    releaseOnEdges: false, // Opcional: desactiva el swiper si el mouse alcanza los bordes
+  },
+  breakpoints: {
+    // when window width is >= 1024px
+    1024: {
+      mousewheel: {
+        invert: false, // Opcional: true para invertir el desplazamiento del mouse
+        sensitivity: 1, // Opcional: ajusta la sensibilidad del desplazamiento
+        releaseOnEdges: false, // Opcional: desactiva el swiper si el mouse alcanza los bordes
+      },
+      simulateTouch: false,
+    }
+  },
+});
+
+setContentSizeToImgSize(); // Llamar a la función para que se ejecute al cargar la página
+changeLanguage(initialLanguage); // Llamamos a la función para que se ejecute al cargar la página
 
 });
 
-let startY = 0;
-let currentSection = 0;
-let canScroll = true;
-let sections = ['', 'sobre-mi', 'proyectos', 'contacto'];
+// let startY = 0;
+// let currentSection = 0;
+// let canScroll = true;
+// let sections = ['', 'sobre-mi', 'proyectos', 'contacto'];
 
 // Función para scrollear a la sección x
-function scrollToSection(section) {
-  const element = document.getElementById(section);
-  if (element) {
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  } else {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  }
-}
+// function scrollToSection(section) {
+//   const element = document.getElementById(section);
+//   if (element) {
+//     element.scrollIntoView({
+//       behavior: 'smooth',
+//       block: 'start',
+//     });
+//   } else {
+//     window.scrollTo({
+//       top: 0,
+//       behavior: 'smooth',
+//     });
+//   }
+// }
 
-function go_to(section) {
-  currentSection = section;
-  scrollToSection(sections[currentSection]);
-}
+// function go_to(section) {
+//   currentSection = section;
+//   scrollToSection(sections[currentSection]);
+// }
 
-document.addEventListener('touchstart', function(e) {
-  startY = e.touches[0].clientY; // Almacena la posición inicial del toque en la pantalla
-});
+// document.addEventListener('touchstart', function(e) {
+//   startY = e.touches[0].clientY; // Almacena la posición inicial del toque en la pantalla
+// });
 
 
 // Obtener referencias a los elementos
@@ -289,7 +343,7 @@ function setContentSizeToImgSize() {
   }
 }
 
-setContentSizeToImgSize(); // Llamar a la función para que se ejecute al cargar la página
+
 
 
 // Utilizamos jsons para cambiar entre lenguajes con un evento ee change en el select
@@ -312,7 +366,7 @@ function changeLanguage(idioma) {
       textos[3] = data.trabajo;
       mostrarNormalego();
       document.getElementById('proyectosTitle').innerText = data.proyectosTitle;
-      // document.getElementById('contacto').innerText = data.contacto;
+      document.getElementById('contactoTitle').innerText = data.contacto;
       //LENGUAJES
       document.getElementById('es').innerText = data.es;
       document.getElementById('en').innerText = data.en;
@@ -321,4 +375,23 @@ function changeLanguage(idioma) {
     });
 }
 
-changeLanguage('en'); // Llamamos a la función para que se ejecute al cargar la página
+let initialLanguage = navigator.language.split('-')[0]; // Obtenemos el idioma del navegador
+document.getElementById(initialLanguage).selected = true;
+
+
+//Seleccionamos el id initialLanguage y lo hacemos selected en el select
+
+
+// Autoresize textarea
+const textArea = document.getElementById('message');
+
+textArea.addEventListener('input', autoResize, false);
+
+function autoResize() {
+  this.style.height = 'auto';
+  if (this.scrollHeight < 300) {  // Comprueba si la altura del contenido es menor que el máximo
+    this.style.height = this.scrollHeight + 'px';
+  } else {
+    this.style.height = '300px';  // Si excede el máximo, establece la altura en 300px
+  }
+}
