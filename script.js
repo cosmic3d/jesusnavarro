@@ -141,6 +141,24 @@ document.addEventListener('DOMContentLoaded', function() {
 //   }
 // }, { passive: false });
 
+// Selecciona todos los elementos con la clase 'github-button'
+const github_buttons = document.querySelectorAll('.github-button');
+
+// Añade un manejador de eventos a cada botón
+github_buttons.forEach(github_button => {
+    github_button.addEventListener('click', function() {
+        // Abre la URL del atributo 'href' en una nueva ventana
+        const href = github_button.getAttribute('href');
+        if (href) {
+            window.open(href, '_blank');
+        } else {
+            console.error('No se encontró el atributo href');
+        }
+    });
+});
+
+
+
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 1,
   speed: 500,
@@ -308,23 +326,19 @@ let ctrlKeyDown = false;
 document.addEventListener("keydown", function (e) {
   if (e.ctrlKey) {
     ctrlKeyDown = true;
-    console.log(e.code); 
     if (e.code === "BracketRight" ||
         e.code === "NumpadAdd" ||
         e.code === "Slash" ||
         e.code === "NumpadSubtract") {
       e.preventDefault();
-      console.log("Prevented zoom");
     }
     return false;
   }
 });
 
 document.addEventListener("keyup", function (e) {
-  console.log(e.code);
   if (e.ctrlKey || e.code === "ControlLeft" || e.code === "ControlRight") {
     ctrlKeyDown = false;
-    console.log("Ctrl key up");
   }
 });
 
@@ -395,3 +409,5 @@ function autoResize() {
     this.style.height = '300px';  // Si excede el máximo, establece la altura en 300px
   }
 }
+
+
