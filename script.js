@@ -1,13 +1,14 @@
 function obtenerNivelZoom() {
   var documentWidth = document.documentElement.clientWidth;
   var windowWidth = window.innerWidth;
-
+  
   // Calcular el nivel de zoom
   var zoomLevel = windowWidth / documentWidth;
-
+  
   return zoomLevel;
 }
 
+var mainSwiper = null;
 document.addEventListener('DOMContentLoaded', function() {
   const bg = document.getElementById('bg');
   let obj_X = 0;
@@ -73,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-bg', '#ffffff');
       root.style.setProperty('--color-invert', 'invert(0)');
       root.style.setProperty('--color-invert-hover', 'invert(1)');
+      root.style.setProperty('--color-brightness', 'brightness(1.2)');
       // bg.style.backgroundImage = "url('img/cosmic_bg3.jpg')";
     } else {
       
@@ -82,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
       root.style.setProperty('--color-bg', '#000000');
       root.style.setProperty('--color-invert', 'invert(1)');
       root.style.setProperty('--color-invert-hover', 'invert(0)');
+      root.style.setProperty('--color-brightness', 'brightness(0.4)');
       // bg.style.backgroundImage = "url('img/cosmic_bg.jpg')";
 
     }
@@ -142,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // }, { passive: false });
 
 // Selecciona todos los elementos con la clase 'github-button'
-const github_buttons = document.querySelectorAll('.github-button');
+const github_buttons = document.querySelectorAll('.github-button'); //PUEDE QUE EN EL FUTURO DEJE DE FUNCIONAR AL CAMBIAR EL IDIOMA
 
 // Añade un manejador de eventos a cada botón
 github_buttons.forEach(github_button => {
@@ -187,7 +190,7 @@ var swiper = new Swiper(".mySwiper", {
   loop: true
 });
 
-var mainSwiper = new Swiper(".mainSwiper", {
+mainSwiper = new Swiper(".mainSwiper", {
   slidesPerView: 1,
   speed: 450,
   direction: 'vertical',
@@ -244,6 +247,11 @@ changeLanguage(initialLanguage); // Llamamos a la función para que se ejecute a
 // document.addEventListener('touchstart', function(e) {
 //   startY = e.touches[0].clientY; // Almacena la posición inicial del toque en la pantalla
 // });
+
+
+function go_to(section) {
+  mainSwiper.slideTo(section, 500, true);
+}
 
 
 // Obtener referencias a los elementos

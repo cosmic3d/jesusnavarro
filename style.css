@@ -42,6 +42,13 @@ html, body {
 	--color-bg: var(--color-bg-light);
 	--color-invert: invert(1);
 	--color-invert-hover: invert(0);
+	--color-brightness: brightness(0.4);
+}
+
+/* Esta mierda que no sé dónde ponerla */
+a {
+	text-decoration: none;
+	color: var(--color-text);
 }
 
 
@@ -368,21 +375,21 @@ nav {
 #sobre-mi-info-p p span {
 	font-size: 24px;
 	font-weight: 600;
-	animation-name: glow_grayscale;
+	animation-name: glow_invert;
 	animation-duration: 2s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 }
 
-@keyframes glow_grayscale {
+@keyframes glow_invert {
 	0% {
-		filter: grayscale(100%);
+		filter: invert(100%);
 	}
 	50% {
-		filter: grayscale(0%);
+		filter: invert(0%);
 	}
 	100% {
-		filter: grayscale(100%);
+		filter: invert(100%);
 	}
 	
 }
@@ -560,23 +567,17 @@ max-height: 50% !important;
 	color: var(--color-text);
 }
 
-.swiper-slide .proyect-icons li:hover:not(.github-icon):not(.github-text) i{
+li:hover:not(.github-icon):not(.github-text) i{
 	transform: scale(1.2);
 	text-shadow: 0 0 5px var(--color-text);
 }
 
-.swiper-slide .proyect-icons li:hover:not(.github-icon):not(.github-text) img{
+li:hover:not(.github-icon):not(.github-text) img{
 	transform: scale(1.2);
 	box-shadow: 0 0 5px var(--color-text);
 }
 
-.swiper-slide .proyect-icons li i.abilities, .swiper-slide .proyect-icons li img.abilities
-{
-	transition: all 0.15s ease-in-out;
-	
-}
-
-.swiper-slide .proyect-icons li:not(:hover) i.abilities, .swiper-slide .proyect-icons li:not(:hover) img.abilities
+li:not(:hover) i.abilities, .swiper-slide .proyect-icons li:not(:hover) img.abilities
 {
 	transition: all 0.15s ease-in-out;
 	color: var(--color-text) !important;
@@ -630,7 +631,7 @@ max-height: 50% !important;
 
 .proyect-icons.github-button {
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
 	border-radius: 20px 20px 20px 20px;
 	height: 100%;
@@ -657,9 +658,55 @@ max-height: 50% !important;
 
 #contacto {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	flex-direction: column;
+}
+
+#redes {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+	height: 40%;
+	flex-direction: column;
+}
+
+#redes .proyect-icons {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	transition: all 0.15s ease-in-out;
+	color: var(--color-text);
+}
+
+#redes .proyect-icons li{
+	width: 150px;
+	height: 150px;
+	transition: all 0.15s ease-in-out;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+}
+
+#redes h5{
+	font-size: 24px;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+
+}
+
+#redes .proyect-icons li a i{
+	font-size: 100px;
+	color: inherit;
+}
+
+#redes .proyect-icons li:hover a i{
+	font-size: 120px;
 }
 
 #formulario {
@@ -667,7 +714,23 @@ max-height: 50% !important;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	width: 40%;
+	width: 60%;
+	height: 50%;
+	backdrop-filter: var(--color-brightness) blur(2px) saturate(200%);
+	border-radius: 25px;
+	border: 1px solid var(--color-text);
+}
+
+#formulario h1 {
+	font-size: 36px;
+	text-align: center;
+	font-weight: 600;
+	margin: 0;
+	/* border: 1px solid var(--color-text); */
+	text-shadow: var(--color-text) 0 0 5px;
+	border-radius: 20px;
+	padding: 10px;
+	backdrop-filter: blur(2px) saturate(200%);
 }
 
 #formulario form {
@@ -679,22 +742,23 @@ max-height: 50% !important;
 }
 
 #formulario button {
-	font-size: 24px;
-	width: 90%;
+	width: 50%;
 	height: 40px;
 	border-radius: 5px;
 	border: 1px solid var(--color-text);
 	background-color: transparent;
+	backdrop-filter: blur(2px) saturate(200%);
 	color: var(--color-text);
-	padding: 5px;
+	/* text-shadow: var(--color-text) 0 0 5px; */
+	font-size: 24px;
 	margin: 10px 0;
-	transition: all 0.15s ease-in-out;
+	outline: none;
+	font-weight: 500;
+	text-shadow: var(--color-text) 0 0 5px;
 }
 
 #formulario button:hover {
-	background-color: var(--color-text);
-	color: var(--color-bg);
-	border: 1px solid var(--color-bg);
+	backdrop-filter: blur(8px) saturate(200%);
 }
 
 .form-group {
@@ -706,27 +770,47 @@ max-height: 50% !important;
 	width: 100%;
 }
 
-.form-group input, .form-group textarea {
+.form-group label {
 	font-size: 24px;
-	width: 90%;
+	height: 40px;
+	padding: 5px;
+	text-align: center;
+	backdrop-filter: blur(2px) saturate(200%);
+	border-radius: 20px;
+	border: 1px solid transparent;
+	color: var(--color-text);
+	font-weight: 500;
+	text-shadow: var(--color-text) 0 0 5px;
+	
+}
+
+.form-group input, .form-group textarea{
+	color: var(--color-text);
+	font-size: 24px;
+	width: 50%;
 	height: 40px;
 	border-radius: 5px;
 	border: 1px solid var(--color-text);
 	background-color: transparent;
 	padding: 5px;
 	margin: 10px 0;
+	backdrop-filter: blur(2px) saturate(200%);
+	outline: none;
+	font-weight: 500;
+	text-shadow: var(--color-text) 0 0 5px;
 }
 
 #message {
-	height: 50px;
+	height: 100px;
   max-height: 300px;
   overflow-y: auto;
 	resize: none;
 }
 
-#message:focus {
-	border: 1px solid var(--color-bg);
-	background-color: var(--color-text);
+#message:focus, #message:hover, #message:active, .form-group input:focus, .form-group input:hover, .form-group input:active, .form-group textarea:focus, .form-group textarea:hover, .form-group textarea:active, #formulario button:focus, #formulario button:hover, #formulario button:active {
+	border: 2px solid var(--color-text);
+	backdrop-filter: blur(8px) saturate(200%);
+	
 }
 
 
@@ -829,6 +913,33 @@ max-height: 50% !important;
 		/* line-height: 25px; */
 		font-weight: 500;
 		/* text-shadow: var(--color-bg ) 0 0 10px; */
+	}
+
+	#redes .proyect-icons li a i{
+		font-size: 50px;
+		color: inherit;
+	}
+	
+	#redes .proyect-icons li:hover a i{
+		font-size: 75px;
+	}
+
+	#redes .proyect-icons li{
+		width:100px;
+		height:100px;
+		transition: all 0.15s ease-in-out;
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#formulario {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
 	}
 	/* SWIPER AND PROYECTOS */
 	/* .slide-content {
