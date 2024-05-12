@@ -561,7 +561,7 @@ max-height: 50% !important;
 	align-items: center;
 	width: 60%;
 	font-size: 40px;
-	gap: 20px;
+	gap: 10px;
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -896,6 +896,18 @@ li:not(:hover) i.abilities, .swiper-slide .proyect-icons li:not(:hover) img.abil
 		font-size: 4vw;
 		text-align: center;
 		width: 100%;
+	}
+
+	.swiper-slide .proyect-icons{
+		gap: 5px;
+	}
+
+	.swiper-slide .proyect-icons li:not(.github-icon):not(.github-text) {
+		width: 35px;
+		height: 35px;
+	}
+	.swiper-slide .proyect-icons:not(.redes-icons) li:not(.github-icon):not(.github-text) i{
+		font-size: 35px;
 	}
 
 	#sobre-mi-inside {

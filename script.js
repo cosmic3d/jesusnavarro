@@ -10,6 +10,13 @@ function obtenerNivelZoom() {
 
 var mainSwiper = null;
 document.addEventListener('DOMContentLoaded', function() {
+  //Language
+  let initialLanguage = navigator.language.split('-')[0]; // Obtenemos el idioma del navegador
+document.getElementById(initialLanguage).selected = true; // Seleccionamos el idioma del navegador en el select
+loadProjects(initialLanguage); // Cargamos los proyectos en el idioma del navegador
+
+
+
   const bg = document.getElementById('bg');
   let obj_X = 0;
   let obj_Y = 0;
@@ -265,9 +272,9 @@ function go_to(section) {
 
 
 // Obtener referencias a los elementos
-const pfp = document.getElementById('pfp');
-const alterego = document.querySelectorAll('.alterego');
-const normalego = document.querySelectorAll('.normalego');
+let pfp = document.getElementById('pfp');
+let alterego = document.querySelectorAll('.alterego');
+let normalego = document.querySelectorAll('.normalego');
 const textos = ["cosmic3d", "Jesús Navarro", "Ajedrecista \u2659 y amante de los gatos \uD83D\uDC08", "Software Developer Junior C/C++ | Game Developer"]
 let i = [0,0,0,0];
 let timeouts = [];
@@ -276,7 +283,7 @@ const totalTime = 1500;
 normalego.forEach((element) => {
   element.innerHTML = '';
   element.style.display = 'block';
-  mostrarTexto(element, textos[parseInt(element.id)], parseInt(element.id));
+  mostrarTexto(element, textos[parseInt(element.getAttribute('num'))], parseInt(element.getAttribute('num')));
   
 });
 
@@ -294,7 +301,6 @@ function mostrarTexto(elemento, texto, index) {
 
 // Agregar un evento 'mouseenter' al elemento #pfp
 pfp.addEventListener('mouseenter', function() {
-  
   mostrarAlterego();
   // clearInterval(intervalo);
 });
@@ -308,7 +314,7 @@ function mostrarAlterego() {
   alterego.forEach((element) => {
     element.innerHTML = '';
     element.style.display = 'block';
-    mostrarTexto(element, textos[parseInt(element.id)], parseInt(element.id));
+    mostrarTexto(element, textos[parseInt(element.getAttribute('num'))], parseInt(element.getAttribute('num')));
   });
   normalego.forEach((element) => {
     element.style.display = 'none';
@@ -333,7 +339,7 @@ function mostrarNormalego() {
   normalego.forEach((element) => {
     element.innerHTML = '';
     element.style.display = 'block';
-    mostrarTexto(element, textos[parseInt(element.id)], parseInt(element.id));
+    mostrarTexto(element, textos[parseInt(element.getAttribute('num'))], parseInt(element.getAttribute('num')));
     
   });
 }
@@ -380,8 +386,8 @@ function setContentSizeToImgSize() {
 
 // Utilizamos jsons para cambiar entre lenguajes con un evento ee change en el select
 const idiomas = {
-  "es": "languages/espanol.json",
-  "en": "languages/english.json"
+  "es": "languages/es.json",
+  "en": "languages/en.json"
 };
 
 document.getElementById('idiomas').addEventListener('change', function() {
@@ -389,26 +395,61 @@ document.getElementById('idiomas').addEventListener('change', function() {
   changeLanguage(idioma);
 });
 
-function changeLanguage(idioma) {
-  fetch(idiomas[idioma])
+function loadProjects(initLang) {
+  fetch(`languages/${initLang}.json`)  // Asume que el archivo está en español por defecto
     .then(response => response.json())
     .then(data => {
-      //INICIO
-      textos[2] = data.yo;
-      textos[3] = data.trabajo;
-      mostrarNormalego();
-      document.getElementById('proyectosTitle').innerText = data.proyectosTitle;
-      document.getElementById('contactoTitle').innerText = data.contacto;
-      //LENGUAJES
-      document.getElementById('es').innerText = data.es;
-      document.getElementById('en').innerText = data.en;
-      document.getElementById('ca').innerText = data.ca;
-      document.getElementById('de').innerText = data.de;
+      renderProjects(data.projects);
     });
 }
 
-let initialLanguage = navigator.language.split('-')[0]; // Obtenemos el idioma del navegador
-document.getElementById(initialLanguage).selected = true;
+function renderProjects(projects) {
+  const container = document.querySelectorAll('.swiper-wrapper')[1];
+  container.innerHTML = '';  // Limpia los proyectos actuales
+  projects.forEach(project => {
+    const html = `
+      <div class="swiper-slide">
+        <div class="slide-content">
+          <div class="slide-content-info">
+            <h2 class="title">${project.title}</h2>
+            <p class="subtitle">${project.subtitle}</p>
+            <section>
+            <ul class="proyect-icons">
+              ${project.icons.map(icon => `<li><i class="${icon.class} abilities" title="${icon.title}"></i></li>`).join('')}
+            </ul>
+            <ul class="proyect-icons github-button fa-2xl" href="${project.link}">
+                <li class="github-icon"><i class="devicon-github-original"></i></li>
+                <li class="github-text"><a class="subtitle">code</a></li>
+            </ul>
+            </section>
+          </div>
+          <img src="${project.image}" alt="${project.title}" class="slide-content-img">
+        </div>
+      </div>
+    `;
+    container.insertAdjacentHTML('beforeend', html);
+  });
+}
+
+function changeLanguage(language) {
+  fetch(`languages/${language}.json`)
+    .then(response => response.json())
+    .then(data => {
+      // Actualiza texto e imágenes de los proyectos
+      renderProjects(data.projects);
+      // Actualiza todos los elementos basados en su id y la correspondencia en el JSON
+      Object.keys(data).forEach(key => {
+        const element = document.getElementById(key);
+        if(element && key !== 'projects') {
+          element.innerText = data[key];
+        }
+      });
+    });
+}
+
+
+
+
 
 
 //Seleccionamos el id initialLanguage y lo hacemos selected en el select

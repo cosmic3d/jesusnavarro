@@ -1,0 +1,60 @@
+{
+  "tabHome": "Quién soy",
+  "tabProjects": "Proyectos",
+  "tabContact": "Contacto",
+  "nameAlterEgo": "cosmic3d",
+  "nameNormal": "Jesús Navarro",
+  "bioAlterEgo": "Ajedrecista \u2659 y amante de los gatos \uD83D\uDC08",
+  "bioNormal": "Desarrollador de software C | Python",
+  "passion": "Apasionado por la programación y el arte",
+  "artSpan": "arte",
+  "sobreMiTitle": "Sobre mí",
+  "contactoTitle": "Contacto",
+  "formTitle": "¡Mándame un mensaje!",
+  "sendButton": "Enviar",
+  "followMeTitle": "¡Sígueme en mis redes!",
+  "githubLabel": "Github",
+  "linkedinLabel": "LinkedIn",
+  "itchioLabel": "itch.io",
+  "chessComLabel": "chess.com",
+  "cvLabel": "CV",
+  "projects": [
+    {
+      "title": "Fil de Fer",
+      "subtitle": "Una representación en 3D de un mapa utilizando la librería MinilibX de C",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-gcc-plain colored", "title": "GCC Compiler"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+      ],
+      "image": "img/map3.jpeg",
+      "link": "https://github.com/cosmic3d/ft_fdf"
+    },
+    {
+      "title": "Cub3D",
+      "subtitle": "Una recreación 3D del clásico Wolfenstein 3D utilizando la técnica de Raycasting",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-gcc-plain colored", "title": "GCC Compiler"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
+        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+      ],
+      "image": "img/cub3d.png",
+      "link": "https://github.com/cosmic3d/cub3D"
+    },
+    {
+      "title": "Moscow Metro",
+      "subtitle": "Una recreación 3D del clásico Wolfenstein 3D utilizando la técnica de Raycasting",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-gcc-plain colored", "title": "GCC Compiler"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
+        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+      ],
+      "image": "img/cub3d.png"
+    }
+  ]
+}
