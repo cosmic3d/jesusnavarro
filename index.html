@@ -84,8 +84,8 @@
           <option id="tr" value="tr">Turkish</option>
           <option id="el" value="el">Greek</option>
           <option id="che" value="che">Argentino</option>
-      </select>
-      
+        </select>
+
         <div class="language-theme">
           <!-- <input type="checkbox" id="color-theme-btn" style="display: none;">
           <label for="color-theme-btn" id="color-theme"></label> -->
@@ -105,7 +105,8 @@
             <div id="info">
               <h1 class="alterego" id="0" style="display: none;">cosmic3d</h1>
               <h1 class="normalego" id="1">Jesús Navarro</h1>
-              <h2 class="alterego" id="2" style="display: none;">Ajedrecista &#9817; y amante de los gatos &#128008;</h2>
+              <h2 class="alterego" id="2" style="display: none;">Ajedrecista &#9817; y amante de los gatos &#128008;
+              </h2>
               <h2 class="normalego" id="3">Desarrollador de software C | Python</h2>
               <p>Apasionado por la programación y el <span id="art">arte</span>.</p>
             </div>
@@ -117,14 +118,16 @@
           <h1 id="sobreMiTitle">Sobre mí</h1>
           <div id="sobre-mi-inside">
             <img src="img/floppahacker.jpg" alt="cosmic3d" title="This is the real me">
-          <div id="sobre-mi-info">
-            <div id="sobre-mi-info-p">
-              <p><span>👨‍💻</span>Estudiante de Ingeniería de Software en 42 Barcelona<span>👨‍💻</span></p>
-              <p><span>❤️‍🔥</span>Desde mi primer contacto con la programación he amado este amplio mundo<span>❤️‍🔥</span></p>
-              <p><span>👾</span>He realizado proyectos para desarrollo web, gráficos, sistemas e incluso videojuegos<span>👾</span></p>
-              <p><span>⚙️</span>Fan número 1 del lenguaje de programación C<span>⚙️</span></p>
+            <div id="sobre-mi-info">
+              <div id="sobre-mi-info-p">
+                <p><span>👨‍💻</span>Estudiante de Ingeniería de Software en 42 Barcelona<span>👨‍💻</span></p>
+                <p><span>❤️‍🔥</span>Desde mi primer contacto con la programación he amado este amplio
+                  mundo<span>❤️‍🔥</span></p>
+                <p><span>👾</span>He realizado proyectos para desarrollo web, gráficos, sistemas e incluso
+                  videojuegos<span>👾</span></p>
+                <p><span>⚙️</span>Fan número 1 del lenguaje de programación C<span>⚙️</span></p>
+              </div>
             </div>
-          </div>
           </div>
         </section>
       </div>
@@ -137,20 +140,20 @@
                 <div class="slide-content">
                   <div class="slide-content-info">
                     <h2 class="title">Fil de Fer</h2>
-                    <p class="subtitle">A 3D representation of a map using MinilibX C library</p>
+                    <p class="subtitle">Una representación en 3D de un mapa utilizando la librería MinilibX de C</p>
                     <section>
                       <ul class="proyect-icons fa-xl">
                         <li>
                           <i class="devicon-c-plain-wordmark colored abilities" title="C Language"></i>
                         </li>
                         <li>
-                          <i class="fa-brands fa-github abilities" title="Github"></i>
+                          <i class="devicon-gcc-plain colored abilities" title="gcc"></i>
                         </li>
                         <li>
-                          <i class="fa-brands fa-linkedin abilities" title="LinkedIn"></i>
+                          <i class="devicon-bash-plain colored abilities" title="Bash"></i>
                         </li>
                         <li>
-                          <i class="fa-brands fa-github abilities" title="Github"></i>
+                          <i class="devicon-git-plain colored abilities" title="Git"></i>
                         </li>
                       </ul>
                       <ul class="proyect-icons github-button fa-2xl" href="https://github.com/cosmic3d/ft_fdf">
@@ -164,6 +167,42 @@
                     </section>
                   </div>
                   <img src="img/map3.jpeg" alt="FDF" class="slide-content-img">
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slide-content">
+                  <div class="slide-content-info">
+                    <h2 class="title">Cub3D</h2>
+                    <p class="subtitle">Una recreación 3D del clásico Wolfenstein 3D utilizando la técnica de Raycasting</p>
+                    <section>
+                      <ul class="proyect-icons fa-xl">
+                        <li>
+                          <i class="devicon-c-plain-wordmark colored abilities" title="C Language"></i>
+                        </li>
+                        <li>
+                          <i class="devicon-gcc-plain colored abilities" title="gcc"></i>
+                        </li>
+                        <li>
+                          <i class="devicon-bash-plain colored abilities" title="Bash"></i>
+                        </li>
+                        <li>
+                          <i class="devicon-git-plain colored abilities" title="Git"></i>
+                        </li>
+                        <li>
+                          <i class="devicon-markdown-original colored abilities" title="Markdown"></i>
+                        </li>
+                      </ul>
+                      <ul class="proyect-icons github-button fa-2xl" href="https://github.com/cosmic3d/cub3D">
+                        <li class="github-icon">
+                          <i class="devicon-github-original"></i>
+                        </li>
+                        <li class="github-text">
+                          <a class="subtitle">code</a>
+                        </li>
+                      </ul>
+                    </section>
+                  </div>
+                  <img src="img/cub3d.png" alt="Cub3D" class="slide-content-img">
                 </div>
               </div>
               <div class="swiper-slide">
@@ -229,22 +268,23 @@
           <div id="formulario">
             <h1>Send me a message!</h1>
             <form id="contactForm" action="https://formspree.io/f/xoqgbdbv" method="post">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required maxlength="30" minlength="2">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required minlength="2" maxlength="30">
-                </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" required maxlength="200" minlength="2">Lets work together ☄️</textarea>
-                </div>
-                <button type="submit">Submit</button>
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required maxlength="30" minlength="2">
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required minlength="2" maxlength="30">
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required maxlength="200"
+                  minlength="2">Lets work together ☄️</textarea>
+              </div>
+              <button type="submit">Submit</button>
             </form>
             <!-- <h1 id="responseMessage" style="display: none;"></h1> -->
-        </div>        
+          </div>
           <div id="redes">
             <h1>Follow me on my social networks!</h1>
             <ul class="proyect-icons">
@@ -255,7 +295,8 @@
                 <h5>Github</h5>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/jesús-navarro-romero-486856244/" style="color: #0072b1;" target="_blank">
+                <a href="https://www.linkedin.com/in/jesús-navarro-romero-486856244/" style="color: #0072b1;"
+                  target="_blank">
                   <i class="devicon-linkedin-plain colored abilities"></i>
                 </a>
                 <h5>LinkedIn</h5>
@@ -273,7 +314,8 @@
                 <h5>chess.com</h5>
               </li>
               <li>
-                <a href="https://www.canva.com/design/DAFE_wchA-0/PO2xl2svnHQAsTVmWdameA/view?" style="color: bisque;" target="_blank">
+                <a href="https://www.canva.com/design/DAFE_wchA-0/PO2xl2svnHQAsTVmWdameA/view?" style="color: bisque;"
+                  target="_blank">
                   <i class="fa-solid fa-scroll abilities"></i>
                 </a>
                 <h5>CV</h5>
