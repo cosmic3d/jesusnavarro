@@ -64,31 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     obj_Y = 0;
   });
 
-  // Evento para cambiar el tema de color
-  document.getElementById('color-theme-btn').addEventListener('change', function() {
-    let root = document.documentElement;
-
-    if (this.checked) {
-      // Variables para el tema claro
-      root.style.setProperty('--color-text', '#000000');
-      root.style.setProperty('--color-bg', '#ffffff');
-      root.style.setProperty('--color-invert', 'invert(0)');
-      root.style.setProperty('--color-invert-hover', 'invert(1)');
-      root.style.setProperty('--color-brightness', 'brightness(1.2)');
-      // bg.style.backgroundImage = "url('img/cosmic_bg3.jpg')";
-    } else {
-      
-      // Variables para el tema oscuro
-      
-      root.style.setProperty('--color-text', '#ffffff');
-      root.style.setProperty('--color-bg', '#000000');
-      root.style.setProperty('--color-invert', 'invert(1)');
-      root.style.setProperty('--color-invert-hover', 'invert(0)');
-      root.style.setProperty('--color-brightness', 'brightness(0.4)');
-      // bg.style.backgroundImage = "url('img/cosmic_bg.jpg')";
-
-    }
-  });
+  
 
 
   
@@ -217,6 +193,40 @@ setContentSizeToImgSize(); // Llamar a la función para que se ejecute al cargar
 changeLanguage(initialLanguage); // Llamamos a la función para que se ejecute al cargar la página
 
 });
+
+let darkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let mode = darkMode ? 'dark' : 'light';
+  console.log(mode);
+
+  // Evento para cambiar el tema de color
+  function changeTheme() {
+    let root = document.documentElement;
+    mode = mode === 'light' ? 'dark' : 'light';
+
+    console.log(mode);
+    if (mode === 'light') {
+      // Variables para el tema claro
+      root.style.setProperty('--color-text', '#000000');
+      root.style.setProperty('--color-text-hover', '#ffffff');
+      root.style.setProperty('--color-bg', '#ffffff');
+      root.style.setProperty('--color-invert', 'invert(0)');
+      root.style.setProperty('--color-invert-hover', 'invert(1)');
+      root.style.setProperty('--color-brightness', 'brightness(1.2)');
+      // bg.style.backgroundImage = "url('img/cosmic_bg3.jpg')";
+    } else {
+      
+      // Variables para el tema oscuro
+      
+      root.style.setProperty('--color-text', '#ffffff');
+      root.style.setProperty('--color-text-hover', '#000000');
+      root.style.setProperty('--color-bg', '#000000');
+      root.style.setProperty('--color-invert', 'invert(1)');
+      root.style.setProperty('--color-invert-hover', 'invert(0)');
+      root.style.setProperty('--color-brightness', 'brightness(0.4)');
+      // bg.style.backgroundImage = "url('img/cosmic_bg.jpg')";
+
+    }
+  }
 
 // let startY = 0;
 // let currentSection = 0;
@@ -419,3 +429,39 @@ function autoResize() {
 }
 
 
+
+//Formulario de contacto
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+
+  var formData = new FormData(this); // Recoge los datos del formulario
+
+  var xhr = new XMLHttpRequest(); // Crea una nueva instancia de XMLHttpRequest
+  xhr.open('POST', this.action, true); // Inicializa la petición como POST al archivo server.php
+
+  xhr.onload = function() {
+      if (xhr.status >= 200 && xhr.status < 300) {
+          // Maneja la respuesta exitosa
+          document.getElementById('formulario').style.display = 'none'; // Oculta el formulario
+          var responseMessage = document.getElementById('responseMessage');
+          responseMessage.style.display = 'block'; // Muestra el mensaje de respuesta
+          responseMessage.textContent = 'Thank you for your message! We will get back to you soon.'; // Mensaje de éxito
+      } else {
+          // Maneja la respuesta fallida
+          document.getElementById('formulario').style.display = 'none'; // Oculta el formulario
+          var responseMessage = document.getElementById('responseMessage');
+          responseMessage.style.display = 'block'; // Muestra el mensaje de respuesta
+          responseMessage.textContent = 'Oops! Something went wrong. Please try again later.'; // Mensaje de error
+      }
+  };
+
+  xhr.onerror = function() {
+      // Maneja los errores de conexión
+      document.getElementById('formulario').style.display = 'none';
+      var responseMessage = document.getElementById('responseMessage');
+      responseMessage.style.display = 'block';
+      responseMessage.textContent = 'Error connecting to the server. Please try again later.';
+  };
+
+  xhr.send(formData); // Envía los datos del formulario
+});
