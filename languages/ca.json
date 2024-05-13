@@ -1,0 +1,95 @@
+{
+  "tabHome": "Qui sóc",
+  "tabProjects": "Projectes",
+  "tabContact": "Contacte",
+  "nameAlterEgo": "cosmic3d",
+  "nameNormal": "Jesús Navarro",
+  "bioAlterEgo": "Jugador d'escacs \u2659 i amant dels gats \uD83D\uDC08",
+  "bioNormal": "Desenvolupador de software C | Python",
+  "passion": "Apassionat per la programació i l'",
+  "artSpan": "art",
+  "sobreMiTitle": "Sobre mi",
+  "formTitle": "Envia'm un missatge!",
+  "sendButton": "Enviar",
+  "followMeTitle": "Segueix-me a les meves xarxes!",
+  "githubLabel": "Github",
+  "linkedinLabel": "LinkedIn",
+  "itchioLabel": "itch.io",
+  "chessComLabel": "chess.com",
+  "cvLabel": "CV",
+  "projects": [
+    {
+      "title": "Cub3D",
+      "subtitle": "Una recreació del clàssic Wolfenstein 3D utilitzant la tècnica de Raycasting",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "Llenguatge C"},
+        {"class": "devicon-linux-plain colored", "title": "Sistema Operatiu Linux"},
+        {"class": "devicon-bash-plain colored", "title": "Shell Bash"},
+        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"},
+        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+      ],
+      "image": "img/doom.png",
+      "link": "https://github.com/cosmic3d/cub3D",
+      "gb_custom": false
+    },
+    {
+      "title": "Damnatus",
+      "subtitle": "Un joc 2D de terror i enigmes desenvolupat en GDevelop 5. Guanyador de la game jam del meu grau.",
+      "icons": [
+        {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"},
+        {"class": "devicon-json-plain colored", "title": "Dades JSON"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
+      ],
+      "link": "https://cosmic3d.itch.io/damnatus",
+      "image": "img/damnatus.jpeg",
+      "gb_custom": true,
+      "gb_clr": "lightcoral",
+      "gb_txt": "Juga!",
+      "gb_icon": "fa-brands fa-itch-io"
+    },
+    {
+      "title": "Fil de Fer",
+      "subtitle": "Una representació en 3D d'un mapa utilitzant la biblioteca MinilibX de C",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "Llenguatge C"},
+        {"class": "devicon-linux-plain colored", "title": "Sistema Operatiu Linux"},
+        {"class": "devicon-bash-plain colored", "title": "Shell Bash"},
+        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"}
+      ],
+      "image": "img/map3.jpeg",
+      "link": "https://github.com/cosmic3d/ft_fdf",
+      "gb_custom": false
+    },
+    {
+      "title": "Corsair",
+      "subtitle": "Eina dissenyada per intentar explotar el sistema criptogràfic RSA",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "Llenguatge C"},
+        {"class": "devicon-linux-plain colored", "title": "Sistema Operatiu Linux"},
+        {"class": "devicon-bash-plain colored", "title": "Shell Bash"},
+        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"}
+      ],
+      "image": "img/corsair.jpg",
+      "link": "https://github.com/cosmic3d/Corsair",
+      "gb_custom": false
+    },
+    {
+      "title": "Birbs Desktop",
+      "subtitle": "Un mod per Desktop Goose que afegeix ocells personalitzables al teu escriptori",
+      "icons": [
+        {"class": "devicon-csharp-plain colored", "title": "Llenguatge C#"},
+        {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"}
+      ],
+      "image": "img/desktopbirds.jpeg",
+      "gb_custom": false
+    }
+  ]
+
+}

@@ -1,10 +1,92 @@
 {
-	"yo": "Chess player \u2659 and cat lover \uD83D\uDC08",
-  "trabajo": "Junior Software Developer C/C++ | Game Developer",
-  "proyectosTitle": "Projects",
-  "contacto": "Contact",
-  "es": "Spanish",
-  "en": "English",
-  "ca": "Catalan",
-  "de": "German"
+  "tabHome": "About Me",
+  "tabProjects": "Projects",
+  "tabContact": "Contact",
+  "bioAlterEgo": "Chess player \u2659 and cat lover \uD83D\uDC08",
+  "bioNormal": "Software Developer C | Python",
+  "passion": "Passionate about programming and",
+  "artSpan": "art",
+  "sobreMiTitle": "About Me",
+  "formTitle": "Send me a message!",
+  "sendButton": "Send",
+  "followMeTitle": "Follow me on my networks!",
+  "githubLabel": "Github",
+  "linkedinLabel": "LinkedIn",
+  "itchioLabel": "itch.io",
+  "chessComLabel": "chess.com",
+  "cvLabel": "CV",
+  "projects": [
+    {
+      "title": "Cub3D",
+      "subtitle": "A recreation of the classic Wolfenstein 3D using Raycasting technique",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
+        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+      ],
+      "image": "img/doom.png",
+      "link": "https://github.com/cosmic3d/cub3D",
+      "gb_custom": false
+    },
+    {
+      "title": "Damnatus",
+      "subtitle": "A 2D horror and puzzle game developed in GDevelop 5. Winner of my degree's game jam.",
+      "icons": [
+        {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"},
+        {"class": "devicon-json-plain colored", "title": "JSON Data"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
+      ],
+      "link": "https://cosmic3d.itch.io/damnatus",
+      "image": "img/damnatus.jpeg",
+      "gb_custom": true,
+      "gb_clr": "lightcoral",
+      "gb_txt": "Play!",
+      "gb_icon": "fa-brands fa-itch-io"
+    },
+    {
+      "title": "Fil de Fer",
+      "subtitle": "A 3D representation of a map using the MinilibX library of C",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+      ],
+      "image": "img/map3.jpeg",
+      "link": "https://github.com/cosmic3d/ft_fdf",
+      "gb_custom": false
+    },
+    {
+      "title": "Corsair",
+      "subtitle": "Tool designed to try to exploit the RSA cryptographic system",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+      ],
+      "image": "img/corsair.jpg",
+      "link": "https://github.com/cosmic3d/Corsair",
+      "gb_custom": false
+    },
+    {
+      "title": "Birbs Desktop",
+      "subtitle": "A mod for Desktop Goose that adds customizable birds to your desktop",
+      "icons": [
+        {"class": "devicon-csharp-plain colored", "title": "C# Language"},
+        {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+      ],
+      "image": "img/desktopbirds.jpeg",
+      "gb_custom": false
+    }
+  ]
 }

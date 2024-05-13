@@ -1,0 +1,95 @@
+{
+  "tabHome": "Über mich",
+  "tabProjects": "Projekte",
+  "tabContact": "Kontakt",
+  "nameAlterEgo": "cosmic3d",
+  "nameNormal": "Jesús Navarro",
+  "bioAlterEgo": "Schachspieler \u2659 und Katzenliebhaber \uD83D\uDC08",
+  "bioNormal": "Softwareentwickler C | Python",
+  "passion": "Leidenschaftlich über Programmierung und",
+  "artSpan": "Kunst",
+  "sobreMiTitle": "Über mich",
+  "formTitle": "Schicke mir eine Nachricht!",
+  "sendButton": "Senden",
+  "followMeTitle": "Folge mir in meinen Netzwerken!",
+  "githubLabel": "Github",
+  "linkedinLabel": "LinkedIn",
+  "itchioLabel": "itch.io",
+  "chessComLabel": "chess.com",
+  "cvLabel": "Lebenslauf",
+  "projects": [
+    {
+      "title": "Cub3D",
+      "subtitle": "Eine Nachbildung des Klassikers Wolfenstein 3D mit der Raycasting-Technik",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Programmiersprache"},
+        {"class": "devicon-linux-plain colored", "title": "Linux Betriebssystem"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"},
+        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+      ],
+      "image": "img/doom.png",
+      "link": "https://github.com/cosmic3d/cub3D",
+      "gb_custom": false
+    },
+    {
+      "title": "Damnatus",
+      "subtitle": "Ein 2D-Horror- und Puzzlespiel, entwickelt in GDevelop 5, Gewinner der Game Jam meines Studiengangs.",
+      "icons": [
+        {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"},
+        {"class": "devicon-json-plain colored", "title": "JSON Daten"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
+      ],
+      "link": "https://cosmic3d.itch.io/damnatus",
+      "image": "img/damnatus.jpeg",
+      "gb_custom": true,
+      "gb_clr": "lightcoral",
+      "gb_txt": "Spielen!",
+      "gb_icon": "fa-brands fa-itch-io"
+    },
+    {
+      "title": "Fil de Fer",
+      "subtitle": "Eine 3D-Darstellung einer Karte mit der MinilibX-Bibliothek von C",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Programmiersprache"},
+        {"class": "devicon-linux-plain colored", "title": "Linux Betriebssystem"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"}
+      ],
+      "image": "img/map3.jpeg",
+      "link": "https://github.com/cosmic3d/ft_fdf",
+      "gb_custom": false
+    },
+    {
+      "title": "Corsair",
+      "subtitle": "Werkzeug, das entwickelt wurde, um das kryptografische RSA-System auszunutzen",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Programmiersprache"},
+        {"class": "devicon-linux-plain colored", "title": "Linux Betriebssystem"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"}
+      ],
+      "image": "img/corsair.jpg",
+      "link": "https://github.com/cosmic3d/Corsair",
+      "gb_custom": false
+    },
+    {
+      "title": "Birbs Desktop",
+      "subtitle": "Ein Mod für Desktop Goose, der anpassbare Vögel zu deinem Desktop hinzufügt",
+      "icons": [
+        {"class": "devicon-csharp-plain colored", "title": "C# Programmiersprache"},
+        {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"}
+      ],
+      "image": "img/desktopbirds.jpeg",
+      "gb_custom": false
+    }
+  ]
+
+}

@@ -2,14 +2,11 @@
   "tabHome": "Quién soy",
   "tabProjects": "Proyectos",
   "tabContact": "Contacto",
-  "nameAlterEgo": "cosmic3d",
-  "nameNormal": "Jesús Navarro",
   "bioAlterEgo": "Ajedrecista \u2659 y amante de los gatos \uD83D\uDC08",
   "bioNormal": "Desarrollador de software C | Python",
-  "passion": "Apasionado por la programación y el arte",
+  "passion": "Apasionado por la programación y el",
   "artSpan": "arte",
   "sobreMiTitle": "Sobre mí",
-  "contactoTitle": "Contacto",
   "formTitle": "¡Mándame un mensaje!",
   "sendButton": "Enviar",
   "followMeTitle": "¡Sígueme en mis redes!",
@@ -20,41 +17,77 @@
   "cvLabel": "CV",
   "projects": [
     {
+      "title": "Cub3D",
+      "subtitle": "Una recreación del clásico Wolfenstein 3D utilizando la técnica de Raycasting",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
+        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+      ],
+      "image": "img/doom.png",
+      "link": "https://github.com/cosmic3d/cub3D",
+      "gb_custom": false
+    },
+    {
+      "title": "Damnatus",
+      "subtitle": "Un juego 2D de terror y puzzles desarrollado en GDevelop 5. Ganador de la game jam de mi grado.",
+      "icons": [
+        {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"},
+        {"class": "devicon-json-plain colored", "title": "JSON Data"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
+      ],
+      "link": "https://cosmic3d.itch.io/damnatus",
+      "image": "img/damnatus.jpeg",
+      "gb_custom": true,
+      "gb_clr": "lightcoral",
+      "gb_txt": "¡Juega!",
+      "gb_icon": "fa-brands fa-itch-io"
+    },
+    {
       "title": "Fil de Fer",
       "subtitle": "Una representación en 3D de un mapa utilizando la librería MinilibX de C",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
-        {"class": "devicon-gcc-plain colored", "title": "GCC Compiler"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
         {"class": "devicon-git-plain colored", "title": "Git Version Control"}
       ],
       "image": "img/map3.jpeg",
-      "link": "https://github.com/cosmic3d/ft_fdf"
+      "link": "https://github.com/cosmic3d/ft_fdf",
+      "gb_custom": false
     },
     {
-      "title": "Cub3D",
-      "subtitle": "Una recreación 3D del clásico Wolfenstein 3D utilizando la técnica de Raycasting",
+      "title": "Corsair",
+      "subtitle": "Herramienta diseñada para tratar de explotar el sistema criptográfico RSA",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
-        {"class": "devicon-gcc-plain colored", "title": "GCC Compiler"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
-        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
-        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
       ],
-      "image": "img/cub3d.png",
-      "link": "https://github.com/cosmic3d/cub3D"
+      "image": "img/corsair.jpg",
+      "link": "https://github.com/cosmic3d/Corsair",
+      "gb_custom": false
     },
     {
-      "title": "Moscow Metro",
-      "subtitle": "Una recreación 3D del clásico Wolfenstein 3D utilizando la técnica de Raycasting",
+      "title": "Birbs Desktop",
+      "subtitle": "Un mod para Desktop Goose que añade pájaros personalizables a tu escritorio",
       "icons": [
-        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
-        {"class": "devicon-gcc-plain colored", "title": "GCC Compiler"},
-        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
-        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
-        {"class": "devicon-markdown-original colored", "title": "Markdown"}
+        {"class": "devicon-csharp-plain colored", "title": "C sharp Language"},
+        {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
       ],
-      "image": "img/cub3d.png"
+      "image": "img/desktopbirds.jpeg",
+      "gb_custom": false
     }
+    
   ]
 }
