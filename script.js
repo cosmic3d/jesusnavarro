@@ -12,11 +12,16 @@ function obtenerNivelZoom () {
 
 var mainSwiper = null;
 //Language
-let initialLanguage = navigator.language.split('-')[0]; // Obtenemos el idioma del navegador
-loadProjects(initialLanguage); // Cargamos los proyectos en el idioma del navegador
+let initialLanguage = navigator.language.split('-')[0] || navigator.userLanguage.split('-'); // Obtenemos el idioma del navegador
+// loadProjects(initialLanguage); // Cargamos los proyectos en el idioma del navegador
 changeLanguage(initialLanguage); // Cambiamos el idioma de la página al idioma del navegador
 
 document.addEventListener('DOMContentLoaded', function () {
+  /* La anchura de slide-content-info será siempre la de slide-content-img siempre que se haga resize */
+window.addEventListener('resize', function () {
+  setContentSizeToImgSize();
+});
+
   document.getElementById(initialLanguage).selected = true; // Seleccionamos el idioma del navegador en el select
 
 
@@ -75,61 +80,6 @@ document.addEventListener('DOMContentLoaded', function () {
     obj_Y = 0;
   });
 
-
-
-
-
-
-  // Scroll especial
-  //   window.addEventListener('wheel', function(event) {
-  //     event.preventDefault();
-  //     if (!canScroll || ctrlKeyDown) return;
-  //     if (event.deltaY > 0) {
-  //       canScroll = false;
-  //       currentSection = currentSection == sections.length - 1 ? sections.length - 1 : currentSection + 1;
-  //       scrollToSection(sections[currentSection]);
-  //       this.setTimeout(() => {
-  //         canScroll = true;
-  //       }
-  //       , 325);
-
-  //     } else {
-  //       canScroll = false;
-  //       currentSection = currentSection == 0 ? 0 : currentSection - 1;
-  //       scrollToSection(sections[currentSection]);
-  //       this.setTimeout(() => {
-  //         canScroll = true;
-  //       }
-  //       , 325);
-  //     }
-  // }, { passive: false });
-
-  // //Scroll especial para móviles
-
-  // window.addEventListener('touchmove', function(event) {
-  //   if (!canScroll) return;
-  //   const deltaY = event.touches[0].clientY - startY;
-  //   startY = event.touches[0].clientY;
-  // event.preventDefault();
-  //   if (deltaY < -10) {
-  //     canScroll = false;
-  //     currentSection = currentSection == sections.length - 1 ? sections.length - 1 : currentSection + 1;
-  //     scrollToSection(sections[currentSection]);
-  //     this.setTimeout(() => {
-  //       canScroll = true;
-  //     }
-  //     , 325);
-
-  //   } else if (deltaY > 10){
-  //     canScroll = false;
-  //     currentSection = currentSection == 0 ? 0 : currentSection - 1;
-  //     scrollToSection(sections[currentSection]);
-  //     this.setTimeout(() => {
-  //       canScroll = true;
-  //     }
-  //     , 325);
-  //   }
-  // }, { passive: false });
 
 
 
@@ -194,36 +144,6 @@ function changeTheme () {
 
   }
 }
-
-// let startY = 0;
-// let currentSection = 0;
-// let canScroll = true;
-// let sections = ['', 'sobre-mi', 'proyectos', 'contacto'];
-
-// Función para scrollear a la sección x
-// function scrollToSection(section) {
-//   const element = document.getElementById(section);
-//   if (element) {
-//     element.scrollIntoView({
-//       behavior: 'smooth',
-//       block: 'start',
-//     });
-//   } else {
-//     window.scrollTo({
-//       top: 0,
-//       behavior: 'smooth',
-//     });
-//   }
-// }
-
-// function go_to(section) {
-//   currentSection = section;
-//   scrollToSection(sections[currentSection]);
-// }
-
-// document.addEventListener('touchstart', function(e) {
-//   startY = e.touches[0].clientY; // Almacena la posición inicial del toque en la pantalla
-// });
 
 
 function go_to (section) {
@@ -327,13 +247,10 @@ document.addEventListener("keyup", function (e) {
 });
 
 
-/* La anchura de slide-content-info será siempre la de slide-content-img siempre que se haga resize */
-window.addEventListener('resize', function () {
-  setContentSizeToImgSize();
-});
+
 
 function setContentSizeToImgSize () {
-  let slides = document.getElementsByClassName("slide-content");
+  let slides = document.querySelectorAll(".slide-content");
   for (let i = 0; i < slides.length; i++) {
     let info = slides[i].querySelector(".slide-content-info"); // Obtener el primer hijo con clase "slide-content-info"
     let img = slides[i].querySelector(".slide-content-img"); // Obtener el último hijo con clase "slide-content-img"
@@ -358,12 +275,15 @@ document.getElementById('idiomas').addEventListener('change', function () {
 });
 
 function loadProjects (language, callback) {
-  fetch(`languages/${language}.json`)
-    .then(response => response.json())
-    .then(data => {
-      renderProjects(data.projects);
-      if (callback) callback(); // Inicializa Swiper después de renderizar los proyectos
-    });
+  return new Promise((resolve, reject) => {
+    fetch(`languages/${language}.json`)
+      .then(response => response.json())
+      .then(data => {
+        renderProjects(data.projects);
+        callback();
+        resolve();
+      });
+  });
 }
 
 
@@ -408,11 +328,16 @@ function renderProjects (projects) {
 }
 
 function changeLanguage (language) {
+  loadProjects(language, initSwiperProjects).then(() => {
+    setContentSizeToImgSize();
+    linkGithubButtons();
+  }
+);
   fetch(`languages/${language}.json`)
     .then(response => response.json())
     .then(data => {
       // Actualiza texto e imágenes de los proyectos
-      renderProjects(data.projects);
+      // renderProjects(data.projects);
       // Actualiza todos los elementos basados en su id y la correspondencia en el JSON
       Object.keys(data).forEach(key => {
         const element = document.getElementById(key);
@@ -423,7 +348,14 @@ function changeLanguage (language) {
       textos[2] = data.bioAlterEgo;
       textos[3] = data.bioNormal;
       mostrarNormalEgo();
-    });
+    })
+    // SetTimeout para SetContentSizeToImgSize
+// setTimeout(function () {
+//   setContentSizeToImgSize();
+//   linkGithubButtons();
+// }
+// , 200);
+// setContentSizeToImgSize();
 }
 
 function initSwiperProjects () {
@@ -458,7 +390,10 @@ function initSwiperProjects () {
       }
     }
   });
-  setContentSizeToImgSize(); // Llamar a la función para que se ejecute al cargar los proyectos
+  
+}
+
+function linkGithubButtons () {
   // Selecciona todos los elementos con la clase 'github-button'
   const github_buttons = document.querySelectorAll('.github-button'); //PUEDE QUE EN EL FUTURO DEJE DE FUNCIONAR AL CAMBIAR EL IDIOMA
 
@@ -475,10 +410,6 @@ function initSwiperProjects () {
     });
   });
 }
-
-// Llama a esta función después de cargar y renderizar los proyectos
-loadProjects(initialLanguage, initSwiperProjects);
-
 
 
 
