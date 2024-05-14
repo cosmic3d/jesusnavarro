@@ -29,10 +29,9 @@
 
 > - [📍 Overview](#-overview)
 > - [📦 Features](#-features)
-> - [🌐 Website](#-project-roadmap)
+> - [🌐 Website](#-website)
 > - [🤝 Contributing](#-contributing)
 > - [📄 License](#-license)
-> - [👏 Acknowledgments](#-acknowledgments)
 
 ---
 
@@ -57,7 +56,7 @@ This is a project I started bacause of wanting to improve my web programming ski
 
 ## 🌐 Website
 
-You can access my portfolio at **[https://cosmic3d.github.io/jesusnavarro/](https://cosmic3d.github.io/jesusnavarro/)
+You can access my portfolio at **[https://cosmic3d.github.io/jesusnavarro/](https://cosmic3d.github.io/jesusnavarro/)**
 
 ---
 
