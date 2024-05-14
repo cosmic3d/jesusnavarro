@@ -1,15 +1,17 @@
 {
-  "tabHome": "Über mich",
+  "tabHome": "Wer ich bin",
   "tabProjects": "Projekte",
   "tabContact": "Kontakt",
-  "nameAlterEgo": "cosmic3d",
-  "nameNormal": "Jesús Navarro",
-  "bioAlterEgo": "Schachspieler \u2659 und Katzenliebhaber \uD83D\uDC08",
+  "bioAlterEgo": "Schachspieler ♙ und Katzenliebhaber 🐈",
   "bioNormal": "Softwareentwickler C | Python",
-  "passion": "Leidenschaftlich über Programmierung und",
+  "passion": "Leidenschaftlich für Programmierung und",
   "artSpan": "Kunst",
   "sobreMiTitle": "Über mich",
-  "formTitle": "Schicke mir eine Nachricht!",
+  "study": "Software-Ingenieur-Student an der 42 Barcelona",
+  "loveCoding": "Seit meinem ersten Kontakt mit der Programmierung liebe ich diese weite Welt",
+  "projectsDone": "Ich habe Projekte für Webentwicklung, Grafik, Systeme und sogar Videospiele abgeschlossen",
+  "favLang": "Fan von C und Python, obwohl ich Erfahrung mit vielen anderen Sprachen habe",
+  "formTitle": "Schick mir eine Nachricht!",
   "sendButton": "Senden",
   "followMeTitle": "Folge mir in meinen Netzwerken!",
   "githubLabel": "Github",
@@ -17,13 +19,18 @@
   "itchioLabel": "itch.io",
   "chessComLabel": "chess.com",
   "cvLabel": "Lebenslauf",
+  "proyectosTitle": "Projekte",
+  "nameLabel": "Name:",
+  "emailLabel": "E-Mail:",
+  "messageLabel": "Nachricht:",
+  "message": "Lass uns zusammenarbeiten ☄️",
   "projects": [
     {
       "title": "Cub3D",
-      "subtitle": "Eine Nachbildung des Klassikers Wolfenstein 3D mit der Raycasting-Technik",
+      "subtitle": "Eine Nachbildung des klassischen Wolfenstein 3D mit Raycasting-Technik",
       "icons": [
-        {"class": "devicon-c-plain-wordmark colored", "title": "C Programmiersprache"},
-        {"class": "devicon-linux-plain colored", "title": "Linux Betriebssystem"},
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Sprache"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
         {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"},
         {"class": "devicon-markdown-original colored", "title": "Markdown"}
@@ -34,12 +41,11 @@
     },
     {
       "title": "Damnatus",
-      "subtitle": "Ein 2D-Horror- und Puzzlespiel, entwickelt in GDevelop 5, Gewinner der Game Jam meines Studiengangs.",
+      "subtitle": "Ein 2D-Horror- und Puzzlespiel entwickelt in GDevelop 5. Gewinner des Game Jams meines Studiengangs.",
       "icons": [
         {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
         {"class": "devicon-html5-plain colored", "title": "HTML5"},
         {"class": "devicon-css3-plain colored", "title": "CSS3"},
-        {"class": "devicon-json-plain colored", "title": "JSON Daten"},
         {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
         {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
         {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
@@ -52,11 +58,29 @@
       "gb_icon": "fa-brands fa-itch-io"
     },
     {
-      "title": "Fil de Fer",
-      "subtitle": "Eine 3D-Darstellung einer Karte mit der MinilibX-Bibliothek von C",
+      "title": "Potion Paradox",
+      "subtitle": "Ein 2D-Kooperatives Alchemistensimulator-Spiel entwickelt in GDevelop 5.",
       "icons": [
-        {"class": "devicon-c-plain-wordmark colored", "title": "C Programmiersprache"},
-        {"class": "devicon-linux-plain colored", "title": "Linux Betriebssystem"},
+        {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
+      ],
+      "link": "https://pau1eai.itch.io/potion-paradox",
+      "image": "img/potionparadox.jpeg",
+      "gb_custom": true,
+      "gb_clr": "lightcoral",
+      "gb_txt": "Spielen!",
+      "gb_icon": "fa-brands fa-itch-io"
+    },
+    {
+      "title": "Fil de Fer",
+      "subtitle": "Eine 3D-Darstellung einer Karte mit der MinilibX-Bibliothek in C",
+      "icons": [
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Sprache"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
         {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"}
       ],
@@ -66,10 +90,10 @@
     },
     {
       "title": "Corsair",
-      "subtitle": "Werkzeug, das entwickelt wurde, um das kryptografische RSA-System auszunutzen",
+      "subtitle": "Werkzeug, das entwickelt wurde, um das RSA-Kryptosystem auszunutzen",
       "icons": [
-        {"class": "devicon-c-plain-wordmark colored", "title": "C Programmiersprache"},
-        {"class": "devicon-linux-plain colored", "title": "Linux Betriebssystem"},
+        {"class": "devicon-c-plain-wordmark colored", "title": "C Sprache"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
         {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"}
       ],
@@ -81,15 +105,36 @@
       "title": "Birbs Desktop",
       "subtitle": "Ein Mod für Desktop Goose, der anpassbare Vögel zu deinem Desktop hinzufügt",
       "icons": [
-        {"class": "devicon-csharp-plain colored", "title": "C# Programmiersprache"},
+        {"class": "devicon-csharp-plain colored", "title": "C# Sprache"},
         {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
         {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
         {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
         {"class": "devicon-git-plain colored", "title": "Git Versionskontrolle"}
       ],
       "image": "img/desktopbirds.jpeg",
-      "gb_custom": false
+      "link": "https://drive.google.com/file/d/1yZKG4JlakZpA_isU96EsgXFEyUtwjaml/view?usp=sharing",
+      "gb_custom": true,
+      "gb_clr": "lightblue",
+      "gb_txt": "Video",
+      "gb_icon": "fa-solid fa-file-video"
+    },
+    {
+      "title": "Rechnungsverwaltungsseite",
+      "subtitle": "Eine Website zur Verwaltung von Unternehmensrechnungen mit Login und Datenbank. Erstellt in PHP, MySQL, Docker und CodeIgniter",
+      "icons": [
+        {"class": "devicon-php-plain colored", "title": "PHP"},
+        {"class": "devicon-mysql-plain colored", "title": "MySQL"},
+        {"class": "devicon-docker-plain-wordmark colored", "title": "Docker"},
+        {"class": "devicon-codeigniter-plain-wordmark colored", "title": "CodeIgniter"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"}
+      ],
+      "image": "img/codeigniter.png",
+      "link": "https://docs.google.com/presentation/d/1seuyu-CmSZxpjQGrOVkwg_dj4fWP29taaxDokoWKMKI/edit?usp=sharing",
+      "gb_custom": true,
+      "gb_clr": "yellow",
+      "gb_txt": "Ansehen",
+      "gb_icon": "fa-solid fa-chalkboard"
     }
   ]
-
 }

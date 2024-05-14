@@ -2,13 +2,15 @@
   "tabHome": "Qui sóc",
   "tabProjects": "Projectes",
   "tabContact": "Contacte",
-  "nameAlterEgo": "cosmic3d",
-  "nameNormal": "Jesús Navarro",
-  "bioAlterEgo": "Jugador d'escacs \u2659 i amant dels gats \uD83D\uDC08",
-  "bioNormal": "Desenvolupador de software C | Python",
-  "passion": "Apassionat per la programació i l'",
+  "bioAlterEgo": "Escaquista ♙ i amant dels gats 🐈",
+  "bioNormal": "Desenvolupador de programari C | Python",
+  "passion": "Apasionat per la programació i l'",
   "artSpan": "art",
   "sobreMiTitle": "Sobre mi",
+  "study": "Estudiant d'Enginyeria de Programari a 42 Barcelona",
+  "loveCoding": "Des del meu primer contacte amb la programació, he estimat aquest món vast",
+  "projectsDone": "He completat projectes per al desenvolupament web, gràfics, sistemes i fins i tot videojocs",
+  "favLang": "Fan de C i Python, tot i que tinc experiència en molts altres llenguatges",
   "formTitle": "Envia'm un missatge!",
   "sendButton": "Enviar",
   "followMeTitle": "Segueix-me a les meves xarxes!",
@@ -17,15 +19,20 @@
   "itchioLabel": "itch.io",
   "chessComLabel": "chess.com",
   "cvLabel": "CV",
+  "proyectosTitle": "Projectes",
+  "nameLabel": "Nom:",
+  "emailLabel": "Correu:",
+  "messageLabel": "Missatge:",
+  "message": "Treballem junts ☄️",
   "projects": [
     {
       "title": "Cub3D",
       "subtitle": "Una recreació del clàssic Wolfenstein 3D utilitzant la tècnica de Raycasting",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "Llenguatge C"},
-        {"class": "devicon-linux-plain colored", "title": "Sistema Operatiu Linux"},
-        {"class": "devicon-bash-plain colored", "title": "Shell Bash"},
-        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
         {"class": "devicon-markdown-original colored", "title": "Markdown"}
       ],
       "image": "img/doom.png",
@@ -34,12 +41,11 @@
     },
     {
       "title": "Damnatus",
-      "subtitle": "Un joc 2D de terror i enigmes desenvolupat en GDevelop 5. Guanyador de la game jam del meu grau.",
+      "subtitle": "Un joc 2D de terror i puzles desenvolupat a GDevelop 5. Guanyador de la game jam del meu grau.",
       "icons": [
         {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
         {"class": "devicon-html5-plain colored", "title": "HTML5"},
         {"class": "devicon-css3-plain colored", "title": "CSS3"},
-        {"class": "devicon-json-plain colored", "title": "Dades JSON"},
         {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
         {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
         {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
@@ -52,13 +58,31 @@
       "gb_icon": "fa-brands fa-itch-io"
     },
     {
+      "title": "Potion Paradox",
+      "subtitle": "Un joc 2D de simulador d'alquimista cooperatiu desenvolupat a GDevelop 5.",
+      "icons": [
+        {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
+      ],
+      "link": "https://pau1eai.itch.io/potion-paradox",
+      "image": "img/potionparadox.jpeg",
+      "gb_custom": true,
+      "gb_clr": "lightcoral",
+      "gb_txt": "Juga!",
+      "gb_icon": "fa-brands fa-itch-io"
+    },
+    {
       "title": "Fil de Fer",
-      "subtitle": "Una representació en 3D d'un mapa utilitzant la biblioteca MinilibX de C",
+      "subtitle": "Una representació en 3D d'un mapa utilitzant la llibreria MinilibX de C",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "Llenguatge C"},
-        {"class": "devicon-linux-plain colored", "title": "Sistema Operatiu Linux"},
-        {"class": "devicon-bash-plain colored", "title": "Shell Bash"},
-        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"}
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
       ],
       "image": "img/map3.jpeg",
       "link": "https://github.com/cosmic3d/ft_fdf",
@@ -69,9 +93,9 @@
       "subtitle": "Eina dissenyada per intentar explotar el sistema criptogràfic RSA",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "Llenguatge C"},
-        {"class": "devicon-linux-plain colored", "title": "Sistema Operatiu Linux"},
-        {"class": "devicon-bash-plain colored", "title": "Shell Bash"},
-        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"}
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
       ],
       "image": "img/corsair.jpg",
       "link": "https://github.com/cosmic3d/Corsair",
@@ -79,17 +103,38 @@
     },
     {
       "title": "Birbs Desktop",
-      "subtitle": "Un mod per Desktop Goose que afegeix ocells personalitzables al teu escriptori",
+      "subtitle": "Un mod per a Desktop Goose que afegeix ocells personalitzables al teu escriptori",
       "icons": [
-        {"class": "devicon-csharp-plain colored", "title": "Llenguatge C#"},
+        {"class": "devicon-csharp-plain colored", "title": "C# Llenguatge"},
         {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
         {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
         {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
-        {"class": "devicon-git-plain colored", "title": "Control de Versions Git"}
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
       ],
       "image": "img/desktopbirds.jpeg",
-      "gb_custom": false
+      "link": "https://drive.google.com/file/d/1yZKG4JlakZpA_isU96EsgXFEyUtwjaml/view?usp=sharing",
+      "gb_custom": true,
+      "gb_clr": "lightblue",
+      "gb_txt": "Vídeo",
+      "gb_icon": "fa-solid fa-file-video"
+    },
+    {
+      "title": "Web de gestió de factures",
+      "subtitle": "Una web per gestionar factures d'una empresa, amb login i base de dades. Realitzada en PHP, MySQL, Docker i CodeIgniter",
+      "icons": [
+        {"class": "devicon-php-plain colored", "title": "PHP"},
+        {"class": "devicon-mysql-plain colored", "title": "MySQL"},
+        {"class": "devicon-docker-plain-wordmark colored", "title": "Docker"},
+        {"class": "devicon-codeigniter-plain-wordmark colored", "title": "CodeIgniter"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"}
+      ],
+      "image": "img/codeigniter.png",
+      "link": "https://docs.google.com/presentation/d/1seuyu-CmSZxpjQGrOVkwg_dj4fWP29taaxDokoWKMKI/edit?usp=sharing",
+      "gb_custom": true,
+      "gb_clr": "yellow",
+      "gb_txt": "Veure",
+      "gb_icon": "fa-solid fa-chalkboard"
     }
   ]
-
 }

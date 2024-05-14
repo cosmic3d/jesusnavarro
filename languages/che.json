@@ -1,33 +1,33 @@
 {
-  "tabHome": "Who I am",
-  "tabProjects": "Projects",
-  "tabContact": "Contact",
-  "bioAlterEgo": "Chess player ♙ and cat lover 🐈",
-  "bioNormal": "Software developer C | Python",
-  "passion": "Passionate about programming and",
-  "artSpan": "art",
-  "sobreMiTitle": "About me",
-  "study": "Software Engineering student at 42 Barcelona",
-  "loveCoding": "Since my first contact with programming, I have loved this vast world",
-  "projectsDone": "I have completed projects for web development, graphics, systems, and even video games",
-  "favLang": "Fan of C and Python, although I have experience in many other languages",
-  "formTitle": "Send me a message!",
-  "sendButton": "Send",
-  "followMeTitle": "Follow me on my networks!",
+  "tabHome": "Quién soy",
+  "tabProjects": "Proshectos",
+  "tabContact": "Contacto",
+  "bioAlterEgo": "Ajedrecista ♙ y amante de los michis 🐈",
+  "bioNormal": "Desarroshador de software C | Python",
+  "passion": "Apasionado por la programación y por",
+  "artSpan": "Maradona",
+  "sobreMiTitle": "Sobre mí",
+  "study": "Estudiante de Ingeniería de Software en 42 Barcelona",
+  "loveCoding": "Desde mi primer contacto con la programación he amado este amplio mundo",
+  "projectsDone": "He realizado proshectos para desarrollo web, gráficos, sistemas e incluso videojuegos",
+  "favLang": "Fan de C y Python, aunque tengo experiencia en muchos otros lenguajes",
+  "formTitle": "¡Mándame un mensaje!",
+  "sendButton": "Enviar",
+  "followMeTitle": "¡Seguíme en mis redes!",
   "githubLabel": "Github",
   "linkedinLabel": "LinkedIn",
   "itchioLabel": "itch.io",
   "chessComLabel": "chess.com",
   "cvLabel": "CV",
-  "proyectosTitle": "Projects",
-  "nameLabel": "Name:",
-  "emailLabel": "Email:",
-  "messageLabel": "Message:",
-  "message": "Let's work together ☄️",
+  "proyectosTitle": "Proshectos",
+  "nameLabel": "Nombre:",
+  "emailLabel": "Correo:",
+  "messageLabel": "Mensaje:",
+  "message": "Tomemos un matesito juntos pibe ☄️",
   "projects": [
     {
       "title": "Cub3D",
-      "subtitle": "A recreation of the classic Wolfenstein 3D using Raycasting technique",
+      "subtitle": "Una recreación del clásico Wolfenstein 3D utilizando la técnica de Raycasting",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
         {"class": "devicon-linux-plain colored", "title": "Linux OS"},
@@ -41,7 +41,7 @@
     },
     {
       "title": "Damnatus",
-      "subtitle": "A 2D horror and puzzle game developed in GDevelop 5. Winner of the game jam of my degree.",
+      "subtitle": "Un juego 2D de terror y puzzles desarrollado en GDevelop 5. Ganador de la game jam de mi grado.",
       "icons": [
         {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
         {"class": "devicon-html5-plain colored", "title": "HTML5"},
@@ -54,12 +54,12 @@
       "image": "img/damnatus.jpeg",
       "gb_custom": true,
       "gb_clr": "lightcoral",
-      "gb_txt": "Play!",
+      "gb_txt": "¡Juega!",
       "gb_icon": "fa-brands fa-itch-io"
     },
     {
       "title": "Potion Paradox",
-      "subtitle": "A 2D cooperative alchemist simulator game developed in GDevelop 5.",
+      "subtitle": "Un juego 2D de simulador de alquimista cooperativo desarrollado en GDevelop 5.",
       "icons": [
         {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
         {"class": "devicon-html5-plain colored", "title": "HTML5"},
@@ -72,12 +72,12 @@
       "image": "img/potionparadox.jpeg",
       "gb_custom": true,
       "gb_clr": "lightcoral",
-      "gb_txt": "Play!",
+      "gb_txt": "¡Juega!",
       "gb_icon": "fa-brands fa-itch-io"
     },
     {
       "title": "Fil de Fer",
-      "subtitle": "A 3D representation of a map using the MinilibX library in C",
+      "subtitle": "Una representación en 3D de un mapa utilizando la librería MinilibX de C",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
         {"class": "devicon-linux-plain colored", "title": "Linux OS"},
@@ -90,7 +90,7 @@
     },
     {
       "title": "Corsair",
-      "subtitle": "Tool designed to try to exploit the RSA cryptographic system",
+      "subtitle": "Herramienta diseñada para tratar de explotar el sistema criptográfico RSA",
       "icons": [
         {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
         {"class": "devicon-linux-plain colored", "title": "Linux OS"},
@@ -103,7 +103,7 @@
     },
     {
       "title": "Birbs Desktop",
-      "subtitle": "A mod for Desktop Goose that adds customizable birds to your desktop",
+      "subtitle": "Un mod para Desktop Goose que añade pájaros personalizables a tu escritorio che 🇦🇷",
       "icons": [
         {"class": "devicon-csharp-plain colored", "title": "C# Language"},
         {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
@@ -119,8 +119,8 @@
       "gb_icon": "fa-solid fa-file-video"
     },
     {
-      "title": "Invoice Management Website",
-      "subtitle": "A website to manage company invoices, with login and database. Made in PHP, MySQL, Docker, and CodeIgniter",
+      "title": "Web de gestión de facturas",
+      "subtitle": "Una web para gestionar facturas de una empresa, con login y base de datos. Realizada en PHP ,MySQL, Docker y CodeIgniter",
       "icons": [
         {"class": "devicon-php-plain colored", "title": "PHP"},
         {"class": "devicon-mysql-plain colored", "title": "MySQL"},
@@ -133,7 +133,7 @@
       "link": "https://docs.google.com/presentation/d/1seuyu-CmSZxpjQGrOVkwg_dj4fWP29taaxDokoWKMKI/edit?usp=sharing",
       "gb_custom": true,
       "gb_clr": "yellow",
-      "gb_txt": "View",
+      "gb_txt": "Ver",
       "gb_icon": "fa-solid fa-chalkboard"
     }
   ]

@@ -7,6 +7,10 @@
   "passion": "Apasionado por la programación y el",
   "artSpan": "arte",
   "sobreMiTitle": "Sobre mí",
+  "study": "Estudiante de Ingeniería de Software en 42 Barcelona",
+  "loveCoding": "Desde mi primer contacto con la programación he amado este amplio mundo",
+  "projectsDone": "He realizado proyectos para desarrollo web, gráficos, sistemas e incluso videojuegos",
+  "favLang": "Fan de C y Python, aunque tengo experiencia en muchos otros lenguajes",
   "formTitle": "¡Mándame un mensaje!",
   "sendButton": "Enviar",
   "followMeTitle": "¡Sígueme en mis redes!",
@@ -15,6 +19,11 @@
   "itchioLabel": "itch.io",
   "chessComLabel": "chess.com",
   "cvLabel": "CV",
+  "proyectosTitle": "Proyectos",
+  "nameLabel": "Nombre:",
+  "emailLabel": "Correo:",
+  "messageLabel": "Mensaje:",
+  "message": "Trabajemos juntos ☄️",
   "projects": [
     {
       "title": "Cub3D",
@@ -43,6 +52,24 @@
       ],
       "link": "https://cosmic3d.itch.io/damnatus",
       "image": "img/damnatus.jpeg",
+      "gb_custom": true,
+      "gb_clr": "lightcoral",
+      "gb_txt": "¡Juega!",
+      "gb_icon": "fa-brands fa-itch-io"
+    },
+    {
+      "title": "Potion Paradox",
+      "subtitle": "Un juego 2D de simulador de alquimista cooperativo desarrollado en GDevelop 5.",
+      "icons": [
+        {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"},
+        {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
+        {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
+        {"class": "devicon-premierepro-plain colored", "title": "Adobe Premiere Pro"}
+      ],
+      "link": "https://pau1eai.itch.io/potion-paradox",
+      "image": "img/potionparadox.jpeg",
       "gb_custom": true,
       "gb_clr": "lightcoral",
       "gb_txt": "¡Juega!",
@@ -78,14 +105,36 @@
       "title": "Birbs Desktop",
       "subtitle": "Un mod para Desktop Goose que añade pájaros personalizables a tu escritorio",
       "icons": [
-        {"class": "devicon-csharp-plain colored", "title": "C sharp Language"},
+        {"class": "devicon-csharp-plain colored", "title": "C# Language"},
         {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
         {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
         {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
         {"class": "devicon-git-plain colored", "title": "Git Version Control"}
       ],
       "image": "img/desktopbirds.jpeg",
-      "gb_custom": false
+      "link": "https://drive.google.com/file/d/1yZKG4JlakZpA_isU96EsgXFEyUtwjaml/view?usp=sharing",
+      "gb_custom": true,
+      "gb_clr": "lightblue",
+      "gb_txt": "Video",
+      "gb_icon": "fa-solid fa-file-video"
+    },
+    {
+      "title": "Web de gestión de facturas",
+      "subtitle": "Una web para gestionar facturas de una empresa, con login y base de datos. Realizada en PHP ,MySQL, Docker y CodeIgniter",
+      "icons": [
+        {"class": "devicon-php-plain colored", "title": "PHP"},
+        {"class": "devicon-mysql-plain colored", "title": "MySQL"},
+        {"class": "devicon-docker-plain-wordmark colored", "title": "Docker"},
+        {"class": "devicon-codeigniter-plain-wordmark colored", "title": "CodeIgniter"},
+        {"class": "devicon-html5-plain colored", "title": "HTML5"},
+        {"class": "devicon-css3-plain colored", "title": "CSS3"}
+      ],
+      "image": "img/codeigniter.png",
+      "link": "https://docs.google.com/presentation/d/1seuyu-CmSZxpjQGrOVkwg_dj4fWP29taaxDokoWKMKI/edit?usp=sharing",
+      "gb_custom": true,
+      "gb_clr": "yellow",
+      "gb_txt": "Ver",
+      "gb_icon": "fa-solid fa-chalkboard"
     }
     
   ]

@@ -1,38 +1,38 @@
 {
-  "tabHome": "Who I am",
-  "tabProjects": "Projects",
-  "tabContact": "Contact",
-  "bioAlterEgo": "Chess player ♙ and cat lover 🐈",
-  "bioNormal": "Software developer C | Python",
-  "passion": "Passionate about programming and",
-  "artSpan": "art",
-  "sobreMiTitle": "About me",
-  "study": "Software Engineering student at 42 Barcelona",
-  "loveCoding": "Since my first contact with programming, I have loved this vast world",
-  "projectsDone": "I have completed projects for web development, graphics, systems, and even video games",
-  "favLang": "Fan of C and Python, although I have experience in many other languages",
-  "formTitle": "Send me a message!",
-  "sendButton": "Send",
-  "followMeTitle": "Follow me on my networks!",
+  "tabHome": "Кто я",
+  "tabProjects": "Проекты",
+  "tabContact": "Контакт",
+  "bioAlterEgo": "Шахматист ♙ и любитель кошек 🐈",
+  "bioNormal": "Разработчик программного обеспечения C | Python",
+  "passion": "Увлечен программированием и",
+  "artSpan": "искусством",
+  "sobreMiTitle": "Обо мне",
+  "study": "Студент инженерного факультета программного обеспечения в 42 Barcelona",
+  "loveCoding": "С момента первого контакта с программированием я полюбил этот обширный мир",
+  "projectsDone": "Я выполнил проекты по веб-разработке, графике, системам и даже видеоиграм",
+  "favLang": "Фанат C и Python, хотя у меня есть опыт работы со многими другими языками",
+  "formTitle": "Отправьте мне сообщение!",
+  "sendButton": "Отправить",
+  "followMeTitle": "Подпишитесь на меня в моих сетях!",
   "githubLabel": "Github",
   "linkedinLabel": "LinkedIn",
   "itchioLabel": "itch.io",
   "chessComLabel": "chess.com",
-  "cvLabel": "CV",
-  "proyectosTitle": "Projects",
-  "nameLabel": "Name:",
-  "emailLabel": "Email:",
-  "messageLabel": "Message:",
-  "message": "Let's work together ☄️",
+  "cvLabel": "Резюме",
+  "proyectosTitle": "Проекты",
+  "nameLabel": "Имя:",
+  "emailLabel": "Электронная почта:",
+  "messageLabel": "Сообщение:",
+  "message": "Давайте работать вместе ☄️",
   "projects": [
     {
       "title": "Cub3D",
-      "subtitle": "A recreation of the classic Wolfenstein 3D using Raycasting technique",
+      "subtitle": "Реконструкция классического Wolfenstein 3D с использованием техники Raycasting",
       "icons": [
-        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-c-plain-wordmark colored", "title": "Язык C"},
         {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
-        {"class": "devicon-git-plain colored", "title": "Git Version Control"},
+        {"class": "devicon-git-plain colored", "title": "Контроль версий Git"},
         {"class": "devicon-markdown-original colored", "title": "Markdown"}
       ],
       "image": "img/doom.png",
@@ -41,7 +41,7 @@
     },
     {
       "title": "Damnatus",
-      "subtitle": "A 2D horror and puzzle game developed in GDevelop 5. Winner of the game jam of my degree.",
+      "subtitle": "2D-игра ужасов и головоломок, разработанная на GDevelop 5. Победитель game jam моего курса.",
       "icons": [
         {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
         {"class": "devicon-html5-plain colored", "title": "HTML5"},
@@ -54,12 +54,12 @@
       "image": "img/damnatus.jpeg",
       "gb_custom": true,
       "gb_clr": "lightcoral",
-      "gb_txt": "Play!",
+      "gb_txt": "Играть!",
       "gb_icon": "fa-brands fa-itch-io"
     },
     {
       "title": "Potion Paradox",
-      "subtitle": "A 2D cooperative alchemist simulator game developed in GDevelop 5.",
+      "subtitle": "2D-игра симулятор алхимика, разработанная на GDevelop 5.",
       "icons": [
         {"class": "devicon-javascript-plain colored", "title": "JavaScript"},
         {"class": "devicon-html5-plain colored", "title": "HTML5"},
@@ -72,17 +72,17 @@
       "image": "img/potionparadox.jpeg",
       "gb_custom": true,
       "gb_clr": "lightcoral",
-      "gb_txt": "Play!",
+      "gb_txt": "Играть!",
       "gb_icon": "fa-brands fa-itch-io"
     },
     {
       "title": "Fil de Fer",
-      "subtitle": "A 3D representation of a map using the MinilibX library in C",
+      "subtitle": "3D-изображение карты с использованием библиотеки MinilibX на языке C",
       "icons": [
-        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-c-plain-wordmark colored", "title": "Язык C"},
         {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
-        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+        {"class": "devicon-git-plain colored", "title": "Контроль версий Git"}
       ],
       "image": "img/map3.jpeg",
       "link": "https://github.com/cosmic3d/ft_fdf",
@@ -90,12 +90,12 @@
     },
     {
       "title": "Corsair",
-      "subtitle": "Tool designed to try to exploit the RSA cryptographic system",
+      "subtitle": "Инструмент, предназначенный для попытки взломать криптографическую систему RSA",
       "icons": [
-        {"class": "devicon-c-plain-wordmark colored", "title": "C Language"},
+        {"class": "devicon-c-plain-wordmark colored", "title": "Язык C"},
         {"class": "devicon-linux-plain colored", "title": "Linux OS"},
         {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
-        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+        {"class": "devicon-git-plain colored", "title": "Контроль версий Git"}
       ],
       "image": "img/corsair.jpg",
       "link": "https://github.com/cosmic3d/Corsair",
@@ -103,24 +103,24 @@
     },
     {
       "title": "Birbs Desktop",
-      "subtitle": "A mod for Desktop Goose that adds customizable birds to your desktop",
+      "subtitle": "Мод для Desktop Goose, который добавляет настраиваемых птиц на ваш рабочий стол",
       "icons": [
-        {"class": "devicon-csharp-plain colored", "title": "C# Language"},
+        {"class": "devicon-csharp-plain colored", "title": "Язык C#"},
         {"class": "devicon-visualstudio-plain colored", "title": "Visual Studio"},
         {"class": "devicon-illustrator-plain colored", "title": "Adobe Illustrator"},
         {"class": "devicon-photoshop-plain colored", "title": "Adobe Photoshop"},
-        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+        {"class": "devicon-git-plain colored", "title": "Контроль версий Git"}
       ],
       "image": "img/desktopbirds.jpeg",
       "link": "https://drive.google.com/file/d/1yZKG4JlakZpA_isU96EsgXFEyUtwjaml/view?usp=sharing",
       "gb_custom": true,
       "gb_clr": "lightblue",
-      "gb_txt": "Video",
+      "gb_txt": "Видео",
       "gb_icon": "fa-solid fa-file-video"
     },
     {
-      "title": "Invoice Management Website",
-      "subtitle": "A website to manage company invoices, with login and database. Made in PHP, MySQL, Docker, and CodeIgniter",
+      "title": "Сайт управления счетами",
+      "subtitle": "Сайт для управления счетами компании с входом в систему и базой данных. Сделано на PHP, MySQL, Docker и CodeIgniter",
       "icons": [
         {"class": "devicon-php-plain colored", "title": "PHP"},
         {"class": "devicon-mysql-plain colored", "title": "MySQL"},
@@ -133,7 +133,7 @@
       "link": "https://docs.google.com/presentation/d/1seuyu-CmSZxpjQGrOVkwg_dj4fWP29taaxDokoWKMKI/edit?usp=sharing",
       "gb_custom": true,
       "gb_clr": "yellow",
-      "gb_txt": "View",
+      "gb_txt": "Посмотреть",
       "gb_icon": "fa-solid fa-chalkboard"
     }
   ]

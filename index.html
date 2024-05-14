@@ -66,21 +66,6 @@
           <option id="pt" value="pt">Português</option>
           <option id="ru" value="ru">Русский</option>
           <option id="zh" value="zh">中文</option>
-          <option id="ja" value="ja">日本語</option>
-          <option id="ko" value="ko">한국어</option>
-          <option id="ar" value="ar">العربية</option>
-          <option id="hi" value="hi">हिन्दी</option>
-          <option id="bn" value="bn">বাংলা</option>
-          <option id="nl" value="nl">Nederlands</option>
-          <option id="sv" value="sv">Svenska</option>
-          <option id="no" value="no">Norsk</option>
-          <option id="da" value="da">Dansk</option>
-          <option id="fi" value="fi">Suomi</option>
-          <option id="pl" value="pl">Polski</option>
-          <option id="hu" value="hu">Magyar</option>
-          <option id="cs" value="cs">Čeština</option>
-          <option id="tr" value="tr">Türkçe</option>
-          <option id="el" value="el">Ελληνικά</option>
           <option id="che" value="che">Argentino</option>
         </select>
         
@@ -118,7 +103,7 @@
               <div id="sobre-mi-info-p">
                 <p><span id="iconStudy">👨‍💻</span><span id="study">Estudiante de Ingeniería de Software en 42 Barcelona</span><span id="iconStudyClose">👨‍💻</span></p>
                 <p><span id="iconHeart">❤️‍🔥</span><span id="loveCoding">Desde mi primer contacto con la programación he amado este amplio mundo</span><span id="iconHeartClose">❤️‍🔥</span></p>
-                <p><span id="iconGame">👾</span><span  id="projects">He realizado proyectos para desarrollo web, gráficos, sistemas e incluso videojuegos</span><span id="iconGameClose">👾</span></p>
+                <p><span id="iconGame">👾</span><span  id="projectsDone">He realizado proyectos para desarrollo web, gráficos, sistemas e incluso videojuegos</span><span id="iconGameClose">👾</span></p>
                 <p><span id="iconGear">⚙️</span><span  id="favLang">Fan número 1 del lenguaje de programación C</span><span id="iconGearClose">⚙️</span></p>
               </div>
             </div>
@@ -186,15 +171,15 @@
           <div id="formulario">
             <form id="contactForm" action="https://formspree.io/f/xoqgbdbv" method="post">
               <div class="form-group">
-                <label for="name">Nombre:</label>
+                <label for="name" id="nameLabel">Nombre:</label>
                 <input type="text" id="name" name="name" required maxlength="30" minlength="2">
               </div>
               <div class="form-group">
-                <label for="email">Correo:</label>
+                <label for="email" id="emailLabel">Correo:</label>
                 <input type="email" id="email" name="email" required minlength="2" maxlength="30">
               </div>
               <div class="form-group">
-                <label for="message">Mensaje:</label>
+                <label for="message" id="messageLabel">Mensaje:</label>
                 <textarea id="message" name="message" required maxlength="200" minlength="2">Trabajemos juntos ☄️</textarea>
               </div>
               <button type="submit" id="sendButton">Enviar</button>

@@ -267,6 +267,12 @@ const idiomas = {
   "en": "languages/en.json",
   "ca": "languages/ca.json",
   "de": "languages/de.json",
+  "fr": "languages/fr.json",
+  "it": "languages/it.json",
+  "pt": "languages/pt.json",
+  "ru": "languages/ru.json",
+  "zh": "languages/zh.json",
+  "che": "languages/che.json",
 };
 
 document.getElementById('idiomas').addEventListener('change', function () {
@@ -333,6 +339,12 @@ function changeLanguage (language) {
     linkGithubButtons();
   }
 );
+
+setTimeout(function () {
+  setContentSizeToImgSize();
+  linkGithubButtons();
+}
+, 200); //Por si acaso porque en muchos móviles no se actualiza bien
   fetch(`languages/${language}.json`)
     .then(response => response.json())
     .then(data => {
