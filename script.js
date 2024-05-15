@@ -373,7 +373,8 @@ setTimeout(function () {
 function initSwiperProjects () {
   const swiperContainer = document.querySelector('.mySwiper .swiper-wrapper');
   const slides = swiperContainer.querySelectorAll('.swiper-slide');
-  const loopMode = slides.length >= 3; // Asumiendo que el número mínimo para bucle es 4
+  // const loopMode = slides.length >= 3; // Asumiendo que el número mínimo para bucle es 4
+  const loopMode = true; // Asumiendo que el número mínimo para bucle es 4
 
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
@@ -393,11 +394,11 @@ function initSwiperProjects () {
     breakpoints: {
       1024: {
         slidesPerView: 2.25,
-        loop: false,
+        loop: loopMode,
         freeMode: true,
         freeModeMomentum: true, // Disable momentum in free mode
-        freeModeMomentumRatio: 20, // Set momentum ratio to 0 in free mode
-        // freeModeMomentumBounce: false, // Disable bounce effect in free mode
+        freeModeMomentumRatio: 2000, // Set momentum ratio to 0 in free mode
+        freeModeMomentumBounce: true, // Disable bounce effect in free mode
         // freeModeSticky: false, // Enable sticky behavior in free mode
       }
     }
