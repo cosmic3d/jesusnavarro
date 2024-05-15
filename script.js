@@ -344,7 +344,7 @@ setTimeout(function () {
   setContentSizeToImgSize();
   linkGithubButtons();
 }
-, 200); //Por si acaso porque en muchos móviles no se actualiza bien
+, 1000); //Por si acaso porque en muchos móviles no se actualiza bien
   fetch(`languages/${language}.json`)
     .then(response => response.json())
     .then(data => {
