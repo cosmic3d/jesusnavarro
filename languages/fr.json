@@ -58,6 +58,32 @@
       "gb_icon": "fa-brands fa-itch-io"
     },
     {
+      "title": "Serveur IRC",
+      "subtitle": "Un serveur IRC (Internet Relay Chat) simple écrit en C++ où les utilisateurs peuvent se connecter et discuter",
+      "icons": [
+        {"class": "devicon-cplusplus-plain colored", "title": "C++ Language"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+      ],
+      "link": "https://github.com/cosmic3d/ft_irc",
+      "image": "img/irc.png",
+      "gb_custom": false
+    },
+    {
+      "title": "Serveur IRC",
+      "subtitle": "Un serveur IRC (Internet Relay Chat) simple écrit en C++ où les utilisateurs peuvent se connecter et discuter",
+      "icons": [
+        {"class": "devicon-cplusplus-plain colored", "title": "C++ Language"},
+        {"class": "devicon-linux-plain colored", "title": "Linux OS"},
+        {"class": "devicon-bash-plain colored", "title": "Bash Shell"},
+        {"class": "devicon-git-plain colored", "title": "Git Version Control"}
+      ],
+      "link": "https://github.com/cosmic3d/ft_irc",
+      "image": "img/irc.png",
+      "gb_custom": false
+    },    
+    {
       "title": "Potion Paradox",
       "subtitle": "Un jeu simulateur de coopération d'alchimiste en 2D développé sur GDevelop 5.",
       "icons": [
